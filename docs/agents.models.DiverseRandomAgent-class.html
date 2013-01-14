@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>agents.models.DiverseRandomAgent</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            ><a class="navbar" target="_top" href="http://www.assembla.com/spaces/cis422f12_team2/wiki/">Trades by Thursday</a></th>
+          </tr></table></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        Package&nbsp;agents ::
+        <a href="agents.models-module.html">Module&nbsp;models</a> ::
+        Class&nbsp;DiverseRandomAgent
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="agents.models.DiverseRandomAgent-class.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- ==================== CLASS DESCRIPTION ==================== -->
+<h1 class="epydoc">Class DiverseRandomAgent</h1><p class="nomargin-top"><span class="codelink"><a href="agents.models-pysrc.html#DiverseRandomAgent">source&nbsp;code</a></span></p>
+<center>
+<center>  <map id="uml_class_diagram_for_agents_m_6" name="uml_class_diagram_for_agents_m_6">
+<area shape="rect" id="node15" href="agents.models.Agent-class.html#game" title="agents.models.Agent.game" alt="" coords="17,31,288,49"/>
+<area shape="rect" id="node15" href="agents.models.Agent-class.html#name" title="agents.models.Agent.name" alt="" coords="17,49,288,68"/>
+<area shape="rect" id="node15" href="agents.models.Agent-class.html#frequency" title="agents.models.Agent.frequency" alt="" coords="17,68,288,87"/>
+<area shape="rect" id="node15" href="agents.models.Agent-class.html#last_execute" title="agents.models.Agent.last_execute" alt="" coords="17,87,288,105"/>
+<area shape="rect" id="node15" href="agents.models.Agent-class.html#objects" title="agents.models.Agent.objects" alt="" coords="17,105,288,124"/>
+<area shape="rect" id="node15" href="agents.models.Agent-class.html#ready_to_execute" title="agents.models.Agent.ready_to_execute" alt="" coords="17,127,288,145"/>
+<area shape="rect" id="node15" href="agents.models.Agent-class.html#purchase_stock" title="agents.models.Agent.purchase_stock" alt="" coords="17,145,288,164"/>
+<area shape="rect" id="node15" href="agents.models.Agent-class.html#sell_stock" title="agents.models.Agent.sell_stock" alt="" coords="17,164,288,183"/>
+<area shape="rect" id="node15" href="agents.models.Agent-class.html#get_random_stock" title="agents.models.Agent.get_random_stock" alt="" coords="17,183,288,201"/>
+<area shape="rect" id="node15" href="agents.models.Agent-class.html#get_random_top20" title="agents.models.Agent.get_random_top20" alt="" coords="17,201,288,220"/>
+<area shape="rect" id="node15" href="agents.models.Agent-class.html#get_random_bottom20" title="agents.models.Agent.get_random_bottom20" alt="" coords="17,220,288,239"/>
+<area shape="rect" id="node15" href="agents.models.Agent-class.html#get_random_owned_stock" title="agents.models.Agent.get_random_owned_stock" alt="" coords="17,239,288,257"/>
+<area shape="rect" id="node15" href="agents.models.Agent-class.html#get_top_owned" title="agents.models.Agent.get_top_owned" alt="" coords="17,257,288,276"/>
+<area shape="rect" id="node15" href="agents.models.Agent-class.html#get_bottom_owned" title="agents.models.Agent.get_bottom_owned" alt="" coords="17,276,288,295"/>
+<area shape="rect" id="node15" href="agents.models.Agent-class.html#get_cash_division_quant" title="agents.models.Agent.get_cash_division_quant" alt="" coords="17,295,288,313"/>
+<area shape="rect" id="node15" href="agents.models.Agent-class.html#possible_quantity" title="agents.models.Agent.possible_quantity" alt="" coords="17,313,288,332"/>
+<area shape="rect" id="node15" href="agents.models.Agent-class.html#get_random_purchase_quantity" title="agents.models.Agent.get_random_purchase_quantity" alt="" coords="17,332,288,351"/>
+<area shape="rect" id="node15" href="agents.models.Agent-class.html#get_large_purchase_quantity" title="agents.models.Agent.get_large_purchase_quantity" alt="" coords="17,351,288,369"/>
+<area shape="rect" id="node15" href="agents.models.Agent-class.html#get_small_sell_list" title="agents.models.Agent.get_small_sell_list" alt="" coords="17,388,288,407"/>
+<area shape="rect" id="node1" href="agents.models.Agent-class.html" title="This class defines the framework and methods for computer opponents to maintain and manage portfolios within a game." alt="" coords="5,6,299,413"/>
+<area shape="rect" id="node14" href="agents.models.DiverseRandomAgent-class.html#execute" title="agents.models.DiverseRandomAgent.execute" alt="" coords="88,465,219,484"/>
+<area shape="rect" id="node14" href="agents.models.DiverseRandomAgent-class.html#__unicode__" title="agents.models.DiverseRandomAgent.__unicode__" alt="" coords="88,484,219,503"/>
+<area shape="rect" id="node2" href="agents.models.DiverseRandomAgent-class.html" title="Buys and sells stock randomly, maintaining a diverse portfolio." alt="" coords="76,433,231,509"/>
+</map>
+  <img src="uml_class_diagram_for_agents_m_6.gif" alt='' usemap="#uml_class_diagram_for_agents_m_6" ismap="ismap" class="graph-without-title" />
+</center>
+</center>
+<hr />
+<p>Buys and sells stock randomly, maintaining a diverse portfolio.</p>
+
+<!-- ==================== INSTANCE METHODS ==================== -->
+<a name="section-InstanceMethods"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Instance Methods</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-InstanceMethods"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="execute"></a><span class="summary-sig-name">execute</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="agents.models-pysrc.html#DiverseRandomAgent.execute">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="agents.models.DiverseRandomAgent-class.html#__unicode__" class="summary-sig-name">__unicode__</a>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="agents.models-pysrc.html#DiverseRandomAgent.__unicode__">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="agents.models.Agent-class.html">Agent</a></code></b>:
+      <code><a href="agents.models.Agent-class.html#get_bottom_owned">get_bottom_owned</a></code>,
+      <code><a href="agents.models.Agent-class.html#get_cash_division_quant">get_cash_division_quant</a></code>,
+      <code><a href="agents.models.Agent-class.html#get_large_purchase_quantity">get_large_purchase_quantity</a></code>,
+      <code><a href="agents.models.Agent-class.html#get_large_sale_quantity">get_large_sale_quantity</a></code>,
+      <code><a href="agents.models.Agent-class.html#get_large_sell_list">get_large_sell_list</a></code>,
+      <code><a href="agents.models.Agent-class.html#get_moderate_purchase_quantity">get_moderate_purchase_quantity</a></code>,
+      <code><a href="agents.models.Agent-class.html#get_moderate_sale_quantity">get_moderate_sale_quantity</a></code>,
+      <code><a href="agents.models.Agent-class.html#get_moderate_sell_list">get_moderate_sell_list</a></code>,
+      <code><a href="agents.models.Agent-class.html#get_random_bottom20">get_random_bottom20</a></code>,
+      <code><a href="agents.models.Agent-class.html#get_random_owned_stock">get_random_owned_stock</a></code>,
+      <code><a href="agents.models.Agent-class.html#get_random_purchase_quantity">get_random_purchase_quantity</a></code>,
+      <code><a href="agents.models.Agent-class.html#get_random_sale_quantity">get_random_sale_quantity</a></code>,
+      <code><a href="agents.models.Agent-class.html#get_random_sell_list">get_random_sell_list</a></code>,
+      <code><a href="agents.models.Agent-class.html#get_random_stock">get_random_stock</a></code>,
+      <code><a href="agents.models.Agent-class.html#get_random_top20">get_random_top20</a></code>,
+      <code><a href="agents.models.Agent-class.html#get_small_purchase_quantity">get_small_purchase_quantity</a></code>,
+      <code><a href="agents.models.Agent-class.html#get_small_sale_quantity">get_small_sale_quantity</a></code>,
+      <code><a href="agents.models.Agent-class.html#get_small_sell_list">get_small_sell_list</a></code>,
+      <code><a href="agents.models.Agent-class.html#get_top_owned">get_top_owned</a></code>,
+      <code><a href="agents.models.Agent-class.html#possible_quantity">possible_quantity</a></code>,
+      <code><a href="agents.models.Agent-class.html#purchase_stock">purchase_stock</a></code>,
+      <code><a href="agents.models.Agent-class.html#ready_to_execute">ready_to_execute</a></code>,
+      <code><a href="agents.models.Agent-class.html#sell_stock">sell_stock</a></code>
+      </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== CLASS VARIABLES ==================== -->
+<a name="section-ClassVariables"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Class Variables</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-ClassVariables"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="agents.models.Agent-class.html">Agent</a></code></b>:
+      <code><a href="agents.models.Agent-class.html#frequency">frequency</a></code>,
+      <code><a href="agents.models.Agent-class.html#game">game</a></code>,
+      <code><a href="agents.models.Agent-class.html#last_execute">last_execute</a></code>,
+      <code><a href="agents.models.Agent-class.html#name">name</a></code>,
+      <code><a href="agents.models.Agent-class.html#objects">objects</a></code>
+      </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== METHOD DETAILS ==================== -->
+<a name="section-MethodDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Method Details</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-MethodDetails"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+<a name="__unicode__"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">__unicode__</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="agents.models-pysrc.html#DiverseRandomAgent.__unicode__">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  
+  <dl class="fields">
+    <dt>Overrides:
+        <a href="agents.models.Agent-class.html#__unicode__">Agent.__unicode__</a>
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            ><a class="navbar" target="_top" href="http://www.assembla.com/spaces/cis422f12_team2/wiki/">Trades by Thursday</a></th>
+          </tr></table></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Fri Nov 30 03:02:08 2012
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

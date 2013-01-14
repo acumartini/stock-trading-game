@@ -1,0 +1,62 @@
+{% extends "app/base.html" %}
+
+{% load game_filters %}
+{% load bootstrap %}
+
+{% block title %}{{ game.game_name }}{% endblock title %}
+
+{% block headline %}{{ game.game_name }}{% endblock headline %}
+{% block subhead %}is all {{ creator.username }}'s fault{% endblock subhead %}
+
+{% block content %}
+
+{% if game.pk not in request.user.get_profile.current_games_pks %}
+<form action="{% url users.views.join_game %}" method="POST"> {% csrf_token %}
+    <input type="submit" value="Join this game" class="btn" />
+    <input type="hidden" name="game_id" value="{{ game.pk }}" />
+</form>
+{% endif %}
+
+{% if request.user.get_profile == game.creator %}
+<form action="{% url games.views.add_agent %}" method="POST">
+    {% csrf_token %}
+    {{ form|bootstrap }}
+    <input type="submit" value="Add Agent" />
+    <input type="hidden" name="game_pk" value="{{ game.pk }}" />
+</form>
+{% endif %}
+
+
+
+{% if not game.get_ordered_portfolios %}
+    <p>Nobody is in this game yet. You should totally join.</p>
+{% else %}
+
+<h2> Current Players </h2>
+<table class="table">
+    <thead>
+        <tr>
+            <td>Rank</td>
+            <td>Name</td>
+            <td>Human or Bot?</td>
+            <td>Net Worth</td>
+        </tr>
+    </thead>
+    <tbody>
+        {% for portfolio in game.get_ordered_portfolios %}
+            <tr>
+                <td>{{ forloop.counter }}</td>
+                <td><a href="/user/{{ portfolio.get_username }}">{{ portfolio.get_username }}</a></td>
+                <td>{% if portfolio.ai_opponent %}Bot{% else %}Human{% endif %}</td>
+                <td>{{ portfolio.get_equity }}</td>
+            </tr>
+        {% endfor %}        
+    </tbody>
+</table>
+
+{% endif %}
+
+
+{% endblock content %}
+
+

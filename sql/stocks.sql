@@ -1,0 +1,1 @@
+INSERT INTO stocks_stockticker(ticker) VALUES ('John');

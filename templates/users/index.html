@@ -1,0 +1,19 @@
+{% extends "app/base.html" %}
+{% block title %}All players{% endblock title %}
+
+{% block headline %}Players{% endblock headline %}
+{% block subhead %}{% endblock subhead %}
+
+{% block content %}
+
+{% if all_users %}
+    <ul class="unstyled">
+    {% for user in all_users %}
+        <li><a href="/user/{{ user.username }}/">{{ user.first_name }} {{ user.last_name }} ({{ user.username }})</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <h1>There are currently no users. Need to add users!!!</h1>
+{% endif %}
+
+{% endblock content %}

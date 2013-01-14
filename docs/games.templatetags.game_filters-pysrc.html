@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>games.templatetags.game_filters</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            ><a class="navbar" target="_top" href="http://www.assembla.com/spaces/cis422f12_team2/wiki/">Trades by Thursday</a></th>
+          </tr></table></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        Package&nbsp;games ::
+        Package&nbsp;templatetags ::
+        Module&nbsp;game_filters
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="games.templatetags.game_filters-pysrc.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<h1 class="epydoc">Source Code for <a href="games.templatetags.game_filters-module.html">Module games.templatetags.game_filters</a></h1>
+<pre class="py-src">
+<a name="L1"></a><tt class="py-lineno"> 1</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt class="py-name">django</tt> <tt class="py-keyword">import</tt> <tt class="py-name">template</tt> </tt>
+<a name="L2"></a><tt class="py-lineno"> 2</tt>  <tt class="py-line"> </tt>
+<a name="L3"></a><tt class="py-lineno"> 3</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt class="py-name">games</tt><tt class="py-op">.</tt><tt id="link-0" class="py-name" targets="Module agents.models=agents.models-module.html,Module games.models=games.models-module.html,Module portfolios.models=portfolios.models-module.html,Module stocks.models=stocks.models-module.html,Module users.models=users.models-module.html"><a title="agents.models
+games.models
+portfolios.models
+stocks.models
+users.models" class="py-name" href="#" onclick="return doclink('link-0', 'models', 'link-0');">models</a></tt> <tt class="py-keyword">import</tt> <tt id="link-1" class="py-name" targets="Class games.models.Game=games.models.Game-class.html"><a title="games.models.Game" class="py-name" href="#" onclick="return doclink('link-1', 'Game', 'link-1');">Game</a></tt> </tt>
+<a name="L4"></a><tt class="py-lineno"> 4</tt>  <tt class="py-line"> </tt>
+<a name="L5"></a><tt class="py-lineno"> 5</tt>  <tt class="py-line"><tt class="py-comment"># register for template function calls to custom filters</tt> </tt>
+<a name="L6"></a><tt class="py-lineno"> 6</tt>  <tt class="py-line"><tt id="link-2" class="py-name" targets="Variable games.templatetags.game_filters.register=games.templatetags.game_filters-module.html#register,Variable portfolios.templatetags.portfolio_filters.register=portfolios.templatetags.portfolio_filters-module.html#register,Variable users.templatetags.user_filters.register=users.templatetags.user_filters-module.html#register,Variable users.templatetags.user_session_filters.register=users.templatetags.user_session_filters-module.html#register"><a title="games.templatetags.game_filters.register
+portfolios.templatetags.portfolio_filters.register
+users.templatetags.user_filters.register
+users.templatetags.user_session_filters.register" class="py-name" href="#" onclick="return doclink('link-2', 'register', 'link-2');">register</a></tt> <tt class="py-op">=</tt> <tt class="py-name">template</tt><tt class="py-op">.</tt><tt class="py-name">Library</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L7"></a><tt class="py-lineno"> 7</tt>  <tt class="py-line"> </tt>
+<a name="L8"></a><tt class="py-lineno"> 8</tt>  <tt class="py-line"><tt class="py-comment"># custom filters</tt> </tt>
+<a name="L9"></a><tt class="py-lineno"> 9</tt>  <tt class="py-line"><tt class="py-string">"""</tt> </tt>
+<a name="L10"></a><tt class="py-lineno">10</tt>  <tt class="py-line"><tt class="py-string">Returns a list of games that are currently active</tt> </tt>
+<a name="L11"></a><tt class="py-lineno">11</tt>  <tt class="py-line"><tt class="py-string">"""</tt> </tt>
+<a name="L12"></a><tt class="py-lineno">12</tt>  <tt class="py-line"><tt class="py-decorator">@</tt><tt class="py-decorator">register</tt><tt class="py-op">.</tt><tt class="py-name">filter</tt><tt class="py-op">(</tt><tt id="link-3" class="py-name" targets="Variable agents.models.Agent.name=agents.models.Agent-class.html#name,Method portfolios.models.Portfolio.name()=portfolios.models.Portfolio-class.html#name"><a title="agents.models.Agent.name
+portfolios.models.Portfolio.name" class="py-name" href="#" onclick="return doclink('link-3', 'name', 'link-3');">name</a></tt><tt class="py-op">=</tt><tt class="py-string">'get_active_games'</tt><tt class="py-op">)</tt> </tt>
+<a name="get_active_games"></a><div id="get_active_games-def"><a name="L13"></a><tt class="py-lineno">13</tt> <a class="py-toggle" href="#" id="get_active_games-toggle" onclick="return toggle('get_active_games');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="games.templatetags.game_filters-module.html#get_active_games">get_active_games</a><tt class="py-op">(</tt><tt class="py-param">all_games</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="get_active_games-collapsed" style="display:none;" pad="++" indent="++++"></div><div id="get_active_games-expanded"><a name="L14"></a><tt class="py-lineno">14</tt>  <tt class="py-line">    <tt class="py-name">active_games</tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-op">]</tt> </tt>
+<a name="L15"></a><tt class="py-lineno">15</tt>  <tt class="py-line">    <tt class="py-keyword">for</tt> <tt id="link-4" class="py-name" targets="Variable agents.models.Agent.game=agents.models.Agent-class.html#game,Variable portfolios.models.Portfolio.game=portfolios.models.Portfolio-class.html#game"><a title="agents.models.Agent.game
+portfolios.models.Portfolio.game" class="py-name" href="#" onclick="return doclink('link-4', 'game', 'link-4');">game</a></tt> <tt class="py-keyword">in</tt> <tt class="py-name">all_games</tt><tt class="py-op">:</tt> </tt>
+<a name="L16"></a><tt class="py-lineno">16</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt id="link-5" class="py-name"><a title="agents.models.Agent.game
+portfolios.models.Portfolio.game" class="py-name" href="#" onclick="return doclink('link-5', 'game', 'link-4');">game</a></tt><tt class="py-op">.</tt><tt id="link-6" class="py-name" targets="Method games.models.Game.is_active()=games.models.Game-class.html#is_active"><a title="games.models.Game.is_active" class="py-name" href="#" onclick="return doclink('link-6', 'is_active', 'link-6');">is_active</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L17"></a><tt class="py-lineno">17</tt>  <tt class="py-line">            <tt class="py-name">active_games</tt><tt class="py-op">.</tt><tt class="py-name">append</tt><tt class="py-op">(</tt><tt id="link-7" class="py-name"><a title="agents.models.Agent.game
+portfolios.models.Portfolio.game" class="py-name" href="#" onclick="return doclink('link-7', 'game', 'link-4');">game</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L18"></a><tt class="py-lineno">18</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt class="py-name">active_games</tt> </tt>
+</div><a name="L19"></a><tt class="py-lineno">19</tt>  <tt class="py-line"> </tt>
+<a name="L20"></a><tt class="py-lineno">20</tt>  <tt class="py-line"><tt class="py-string">"""</tt> </tt>
+<a name="L21"></a><tt class="py-lineno">21</tt>  <tt class="py-line"><tt class="py-string">Returns a list of games that are past their ending date</tt> </tt>
+<a name="L22"></a><tt class="py-lineno">22</tt>  <tt class="py-line"><tt class="py-string">"""</tt> </tt>
+<a name="L23"></a><tt class="py-lineno">23</tt>  <tt class="py-line"><tt class="py-decorator">@</tt><tt class="py-decorator">register</tt><tt class="py-op">.</tt><tt class="py-name">filter</tt><tt class="py-op">(</tt><tt id="link-8" class="py-name"><a title="agents.models.Agent.name
+portfolios.models.Portfolio.name" class="py-name" href="#" onclick="return doclink('link-8', 'name', 'link-3');">name</a></tt><tt class="py-op">=</tt><tt class="py-string">'get_past_games'</tt><tt class="py-op">)</tt> </tt>
+<a name="get_past_games"></a><div id="get_past_games-def"><a name="L24"></a><tt class="py-lineno">24</tt> <a class="py-toggle" href="#" id="get_past_games-toggle" onclick="return toggle('get_past_games');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="games.templatetags.game_filters-module.html#get_past_games">get_past_games</a><tt class="py-op">(</tt><tt class="py-param">all_games</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="get_past_games-collapsed" style="display:none;" pad="++" indent="++++"></div><div id="get_past_games-expanded"><a name="L25"></a><tt class="py-lineno">25</tt>  <tt class="py-line">    <tt class="py-name">past_games</tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-op">]</tt> </tt>
+<a name="L26"></a><tt class="py-lineno">26</tt>  <tt class="py-line">    <tt class="py-keyword">for</tt> <tt id="link-9" class="py-name"><a title="agents.models.Agent.game
+portfolios.models.Portfolio.game" class="py-name" href="#" onclick="return doclink('link-9', 'game', 'link-4');">game</a></tt> <tt class="py-keyword">in</tt> <tt class="py-name">all_games</tt><tt class="py-op">:</tt> </tt>
+<a name="L27"></a><tt class="py-lineno">27</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-keyword">not</tt> <tt id="link-10" class="py-name"><a title="agents.models.Agent.game
+portfolios.models.Portfolio.game" class="py-name" href="#" onclick="return doclink('link-10', 'game', 'link-4');">game</a></tt><tt class="py-op">.</tt><tt id="link-11" class="py-name"><a title="games.models.Game.is_active" class="py-name" href="#" onclick="return doclink('link-11', 'is_active', 'link-6');">is_active</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L28"></a><tt class="py-lineno">28</tt>  <tt class="py-line">            <tt class="py-name">past_games</tt><tt class="py-op">.</tt><tt class="py-name">append</tt><tt class="py-op">(</tt><tt id="link-12" class="py-name"><a title="agents.models.Agent.game
+portfolios.models.Portfolio.game" class="py-name" href="#" onclick="return doclink('link-12', 'game', 'link-4');">game</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L29"></a><tt class="py-lineno">29</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt class="py-name">past_games</tt> </tt>
+</div><a name="L30"></a><tt class="py-lineno">30</tt>  <tt class="py-line"> </tt>
+<a name="L31"></a><tt class="py-lineno">31</tt>  <tt class="py-line"><tt class="py-decorator">@</tt><tt class="py-decorator">register</tt><tt class="py-op">.</tt><tt class="py-name">filter</tt><tt class="py-op">(</tt><tt id="link-13" class="py-name"><a title="agents.models.Agent.name
+portfolios.models.Portfolio.name" class="py-name" href="#" onclick="return doclink('link-13', 'name', 'link-3');">name</a></tt><tt class="py-op">=</tt><tt class="py-string">'get_num_players'</tt><tt class="py-op">)</tt> </tt>
+<a name="get_num_players"></a><div id="get_num_players-def"><a name="L32"></a><tt class="py-lineno">32</tt> <a class="py-toggle" href="#" id="get_num_players-toggle" onclick="return toggle('get_num_players');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="games.templatetags.game_filters-module.html#get_num_players">get_num_players</a><tt class="py-op">(</tt><tt class="py-param">game</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="get_num_players-collapsed" style="display:none;" pad="++" indent="++++"></div><div id="get_num_players-expanded"><a name="L33"></a><tt class="py-lineno">33</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt id="link-14" class="py-name"><a title="agents.models.Agent.game
+portfolios.models.Portfolio.game" class="py-name" href="#" onclick="return doclink('link-14', 'game', 'link-4');">game</a></tt><tt class="py-op">.</tt><tt class="py-name">portfolio_set</tt><tt class="py-op">.</tt><tt id="link-15" class="py-name" targets="Function stocks.views.all()=stocks.views-module.html#all"><a title="stocks.views.all" class="py-name" href="#" onclick="return doclink('link-15', 'all', 'link-15');">all</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt class="py-name">count</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L34"></a><tt class="py-lineno">34</tt>  <tt class="py-line"> </tt>
+<a name="L35"></a><tt class="py-lineno">35</tt>  <tt class="py-line"> </tt>
+<a name="L36"></a><tt class="py-lineno">36</tt>  <tt class="py-line"><tt class="py-decorator">@</tt><tt class="py-decorator">register</tt><tt class="py-op">.</tt><tt class="py-name">filter</tt><tt class="py-op">(</tt><tt id="link-16" class="py-name"><a title="agents.models.Agent.name
+portfolios.models.Portfolio.name" class="py-name" href="#" onclick="return doclink('link-16', 'name', 'link-3');">name</a></tt><tt class="py-op">=</tt><tt class="py-string">'get_duration'</tt><tt class="py-op">)</tt> </tt>
+<a name="get_duration"></a><div id="get_duration-def"><a name="L37"></a><tt class="py-lineno">37</tt> <a class="py-toggle" href="#" id="get_duration-toggle" onclick="return toggle('get_duration');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="games.templatetags.game_filters-module.html#get_duration">get_duration</a><tt class="py-op">(</tt><tt class="py-param">game</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="get_duration-collapsed" style="display:none;" pad="++" indent="++++"></div><div id="get_duration-expanded"><a name="L38"></a><tt class="py-lineno">38</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt class="py-op">(</tt><tt id="link-17" class="py-name"><a title="agents.models.Agent.game
+portfolios.models.Portfolio.game" class="py-name" href="#" onclick="return doclink('link-17', 'game', 'link-4');">game</a></tt><tt class="py-op">.</tt><tt id="link-18" class="py-name" targets="Variable games.models.Game.end_date=games.models.Game-class.html#end_date"><a title="games.models.Game.end_date" class="py-name" href="#" onclick="return doclink('link-18', 'end_date', 'link-18');">end_date</a></tt> <tt class="py-op">-</tt> <tt id="link-19" class="py-name"><a title="agents.models.Agent.game
+portfolios.models.Portfolio.game" class="py-name" href="#" onclick="return doclink('link-19', 'game', 'link-4');">game</a></tt><tt class="py-op">.</tt><tt id="link-20" class="py-name" targets="Variable games.models.Game.start_date=games.models.Game-class.html#start_date"><a title="games.models.Game.start_date" class="py-name" href="#" onclick="return doclink('link-20', 'start_date', 'link-20');">start_date</a></tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt class="py-name">days</tt> </tt>
+</div><a name="L39"></a><tt class="py-lineno">39</tt>  <tt class="py-line"> </tt>
+<a name="L40"></a><tt class="py-lineno">40</tt>  <tt class="py-line"><tt class="py-decorator">@</tt><tt class="py-decorator">register</tt><tt class="py-op">.</tt><tt class="py-name">filter</tt><tt class="py-op">(</tt><tt id="link-21" class="py-name"><a title="agents.models.Agent.name
+portfolios.models.Portfolio.name" class="py-name" href="#" onclick="return doclink('link-21', 'name', 'link-3');">name</a></tt><tt class="py-op">=</tt><tt class="py-string">'get_results'</tt><tt class="py-op">)</tt> </tt>
+<a name="get_results"></a><div id="get_results-def"><a name="L41"></a><tt class="py-lineno">41</tt> <a class="py-toggle" href="#" id="get_results-toggle" onclick="return toggle('get_results');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="games.templatetags.game_filters-module.html#get_results">get_results</a><tt class="py-op">(</tt><tt class="py-param">game</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="get_results-collapsed" style="display:none;" pad="++" indent="++++"></div><div id="get_results-expanded"><a name="L42"></a><tt class="py-lineno">42</tt>  <tt class="py-line">    <tt class="py-name">winner</tt> <tt class="py-op">=</tt> <tt id="link-22" class="py-name"><a title="agents.models.Agent.game
+portfolios.models.Portfolio.game" class="py-name" href="#" onclick="return doclink('link-22', 'game', 'link-4');">game</a></tt><tt class="py-op">.</tt><tt class="py-name">get_winner</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L43"></a><tt class="py-lineno">43</tt>  <tt class="py-line">    <tt class="py-keyword">if</tt> <tt class="py-name">winner</tt> <tt class="py-op">!=</tt> <tt class="py-name">None</tt><tt class="py-op">:</tt> </tt>
+<a name="L44"></a><tt class="py-lineno">44</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">winner</tt><tt class="py-op">.</tt><tt id="link-23" class="py-name" targets="Method portfolios.models.Portfolio.get_username()=portfolios.models.Portfolio-class.html#get_username"><a title="portfolios.models.Portfolio.get_username" class="py-name" href="#" onclick="return doclink('link-23', 'get_username', 'link-23');">get_username</a></tt> <tt class="py-op">+</tt> <tt class="py-string">' earned '</tt> <tt class="py-op">+</tt> <tt class="py-name">winner</tt><tt class="py-op">.</tt><tt id="link-24" class="py-name" targets="Variable portfolios.models.Portfolio.winnings=portfolios.models.Portfolio-class.html#winnings"><a title="portfolios.models.Portfolio.winnings" class="py-name" href="#" onclick="return doclink('link-24', 'winnings', 'link-24');">winnings</a></tt> </tt>
+<a name="L45"></a><tt class="py-lineno">45</tt>  <tt class="py-line">    <tt class="py-keyword">else</tt><tt class="py-op">:</tt> </tt>
+<a name="L46"></a><tt class="py-lineno">46</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-string">'No Winner'</tt> </tt>
+</div><a name="L47"></a><tt class="py-lineno">47</tt>  <tt class="py-line"> </tt><script type="text/javascript">
+<!--
+expandto(location.href);
+// -->
+</script>
+</pre>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            ><a class="navbar" target="_top" href="http://www.assembla.com/spaces/cis422f12_team2/wiki/">Trades by Thursday</a></th>
+          </tr></table></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Fri Nov 30 03:02:11 2012
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

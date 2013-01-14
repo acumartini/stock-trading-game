@@ -1,0 +1,100 @@
+{% extends "app/base.html" %}
+
+{% load user_filters %}
+{% load user_session_filters %}
+
+{% block headline %}{{ stock.company_name }}{% endblock headline %}
+{% block subhead %}{{ stock.ticker }}{% endblock subhead %}
+
+{% block content %}
+
+<div class="row">
+    <div class="span8">
+        <div class="row">
+            <div class="span4">
+                <table class="table span4">
+                    <tbody>
+                        <tr>
+                            <td>Current price</td>
+                            <td>{{ stock.current_price }}</td>
+                        </tr>
+                        <tr>
+                            <td>Volume</td>
+                            <td>{{ stock.volume }}</td>
+                        </tr>
+                        <tr>
+                            <td>Opening price</td>
+                            <td>{{ stock.open_price }}</td>
+                        </tr>
+                        <tr>
+                            <td>Change</td>
+                            <td>{{ stock.percent_change }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="span4">
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <td>Days low</td>
+                            <td>{{ stock.days_low }}</td>
+                        </tr>
+                        <tr>
+                            <td>Days high</td>
+                            <td>{{ stock.days_high }}</td>
+                        </tr>
+                        <tr>
+                            <td>Years low</td>
+                            <td>{{ stock.year_low }}</td>
+                        </tr>
+                        <tr>
+                            <td>Years high</td>
+                            <td>{{ stock.year_high }}</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+        <div id="chart" style="width:600px;height:300px;"></div>
+
+    </div>
+    <div class="span4">
+        <div class="well">
+            {% if request|has_active_portfolio %}
+                <div>
+                    <ul id="myTab" class="nav nav-tabs">
+                        <li class="active"><a href="#trade" data-toggle="tab">Buy/Sell</a></li>
+                        <li><a href="#order" data-toggle="tab">Orders</a></li>
+                    </ul>
+                    <div id="myTabContent" class="tab-content">
+                        <div class="tab-pane fade in active" id="trade">
+                        {% trade_form stock %}
+                        <hr />
+                        <form action="{% url watch %}" method="POST">
+                            {% csrf_token %}
+                            <input type="submit" value="Watch" class="btn" />
+                            <input type="hidden" name="stock" value="{{ stock.ticker }}" />
+                        </form>
+                        </div>
+                        <div class="tab-pane fade" id="order">
+                        {% order_form stock %}
+                        </div>
+                    </div>
+                </div>
+            {% elif request.user.is_authenticated %}
+                You must activate a portfolio in order to perform transactions.
+            {% else %}
+                You must login to buy or sell stocks.
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+
+<div id="chart_data" class="hide">{{ stock.historical_prices|safe }}</div>
+
+
+{% endblock content %}

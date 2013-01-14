@@ -1,0 +1,68 @@
+{% extends "app/base.html" %}
+
+{% block content %}
+    
+    {% if all_stocks %}
+	
+        <table id="tfhover" class="tftable" border="1">
+			<tr>
+				<th>Company Name</th>
+				<th>Ticker</th>
+				<th>Current Price</th>
+				<th>Volume</th>
+				<th>Open</th>
+				<th>Change</th>
+				<th>Percent</th>
+				<th>Days Low</th>
+				<th>Days High</th>
+				<th>Year Low</th>
+				<th>Year High</th>
+			
+			</tr>
+        {% for stock in all_stocks %}
+            <tr>
+				<td><a href="/stock/{{ stock.ticker}}/" >{{ stock.company_name }}  </a>  </td>
+				<td>{{ stock.ticker }}</td>
+				<td>{{ stock.current_price }}</td>
+				<td>{{ stock.volume }}</td>
+				<td>{{ stock.open_price }}</td>  
+				<td>{{ stock.change }}</td>   
+				<td>{{ stock.percent_change }}</td>  
+				<td>{{ stock.days_low }}</td>  
+				<td>{{ stock.days_high }}</td>  
+				<td>{{ stock.year_low }}</td>  
+				<td>{{ stock.year_high }}</td>
+			</tr>
+        {% endfor %}
+        </table>
+    {% else %}
+        <h1>There is not any stock!!!</h1>
+    {% endif %}
+<!-- Row Highlight Javascript -->
+<script type="text/javascript">
+	window.onload=function(){
+	var tfrow = document.getElementById('tfhover').rows.length;
+	var tbRow=[];
+	for (var i=1;i<tfrow;i++) {
+		tbRow[i]=document.getElementById('tfhover').rows[i];
+		tbRow[i].onmouseover = function(){
+		  this.style.backgroundColor = '#ffffff';
+		};
+		tbRow[i].onmouseout = function() {
+		  this.style.backgroundColor = '#d4e3e5';
+		};
+	}
+};
+</script>
+<style type="text/css">
+table.tftable {font-size:12px;color:#333333;width:100%;border-width: 1px;border-color: #729ea5;border-collapse: collapse;}
+table.tftable th {font-size:12px;background-color:#acc8cc;border-width: 1px;padding: 8px;border-style: solid;border-color: #729ea5;text-align:left;}
+table.tftable tr {background-color:#d4e3e5;}
+table.tftable td {font-size:12px;border-width: 1px;padding: 8px;border-style: solid;border-color: #729ea5;}
+#title {font-size:18px;}
+</style>
+
+
+
+{% endblock content %}
+

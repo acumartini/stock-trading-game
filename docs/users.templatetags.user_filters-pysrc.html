@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>users.templatetags.user_filters</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            ><a class="navbar" target="_top" href="http://www.assembla.com/spaces/cis422f12_team2/wiki/">Trades by Thursday</a></th>
+          </tr></table></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        Package&nbsp;users ::
+        Package&nbsp;templatetags ::
+        Module&nbsp;user_filters
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="users.templatetags.user_filters-pysrc.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<h1 class="epydoc">Source Code for <a href="users.templatetags.user_filters-module.html">Module users.templatetags.user_filters</a></h1>
+<pre class="py-src">
+<a name="L1"></a><tt class="py-lineno"> 1</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt class="py-name">django</tt> <tt class="py-keyword">import</tt> <tt class="py-name">template</tt> </tt>
+<a name="L2"></a><tt class="py-lineno"> 2</tt>  <tt class="py-line"> </tt>
+<a name="L3"></a><tt class="py-lineno"> 3</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt class="py-name">stocks</tt><tt class="py-op">.</tt><tt id="link-0" class="py-name" targets="Module agents.models=agents.models-module.html,Module games.models=games.models-module.html,Module portfolios.models=portfolios.models-module.html,Module stocks.models=stocks.models-module.html,Module users.models=users.models-module.html"><a title="agents.models
+games.models
+portfolios.models
+stocks.models
+users.models" class="py-name" href="#" onclick="return doclink('link-0', 'models', 'link-0');">models</a></tt> <tt class="py-keyword">import</tt> <tt id="link-1" class="py-name" targets="Class stocks.models.Stock=stocks.models.Stock-class.html"><a title="stocks.models.Stock" class="py-name" href="#" onclick="return doclink('link-1', 'Stock', 'link-1');">Stock</a></tt> </tt>
+<a name="L4"></a><tt class="py-lineno"> 4</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt class="py-name">users</tt><tt class="py-op">.</tt><tt id="link-2" class="py-name"><a title="agents.models
+games.models
+portfolios.models
+stocks.models
+users.models" class="py-name" href="#" onclick="return doclink('link-2', 'models', 'link-0');">models</a></tt> <tt class="py-keyword">import</tt> <tt class="py-name">User</tt><tt class="py-op">,</tt> <tt id="link-3" class="py-name" targets="Class users.models.UserProfile=users.models.UserProfile-class.html"><a title="users.models.UserProfile" class="py-name" href="#" onclick="return doclink('link-3', 'UserProfile', 'link-3');">UserProfile</a></tt> </tt>
+<a name="L5"></a><tt class="py-lineno"> 5</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt class="py-name">portfolios</tt><tt class="py-op">.</tt><tt id="link-4" class="py-name" targets="Module agents.forms=agents.forms-module.html,Module games.forms=games.forms-module.html,Module portfolios.forms=portfolios.forms-module.html,Module users.forms=users.forms-module.html"><a title="agents.forms
+games.forms
+portfolios.forms
+users.forms" class="py-name" href="#" onclick="return doclink('link-4', 'forms', 'link-4');">forms</a></tt> <tt class="py-keyword">import</tt> <tt id="link-5" class="py-name" targets="Class portfolios.forms.TransactionForm=portfolios.forms.TransactionForm-class.html"><a title="portfolios.forms.TransactionForm" class="py-name" href="#" onclick="return doclink('link-5', 'TransactionForm', 'link-5');">TransactionForm</a></tt><tt class="py-op">,</tt> <tt id="link-6" class="py-name" targets="Class portfolios.forms.OrderForm=portfolios.forms.OrderForm-class.html"><a title="portfolios.forms.OrderForm" class="py-name" href="#" onclick="return doclink('link-6', 'OrderForm', 'link-6');">OrderForm</a></tt> </tt>
+<a name="L6"></a><tt class="py-lineno"> 6</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">stocks</tt><tt class="py-op">.</tt><tt id="link-7" class="py-name" targets="Module stocks.api=stocks.api-module.html"><a title="stocks.api" class="py-name" href="#" onclick="return doclink('link-7', 'api', 'link-7');">api</a></tt> <tt class="py-keyword">as</tt> <tt id="link-8" class="py-name"><a title="stocks.api" class="py-name" href="#" onclick="return doclink('link-8', 'api', 'link-7');">api</a></tt> </tt>
+<a name="L7"></a><tt class="py-lineno"> 7</tt>  <tt class="py-line"> </tt>
+<a name="L8"></a><tt class="py-lineno"> 8</tt>  <tt class="py-line"> </tt>
+<a name="L9"></a><tt class="py-lineno"> 9</tt>  <tt class="py-line"><tt class="py-comment"># register for template function calls to custom filters</tt> </tt>
+<a name="L10"></a><tt class="py-lineno">10</tt>  <tt class="py-line"><tt id="link-9" class="py-name" targets="Variable games.templatetags.game_filters.register=games.templatetags.game_filters-module.html#register,Variable portfolios.templatetags.portfolio_filters.register=portfolios.templatetags.portfolio_filters-module.html#register,Variable users.templatetags.user_filters.register=users.templatetags.user_filters-module.html#register,Variable users.templatetags.user_session_filters.register=users.templatetags.user_session_filters-module.html#register"><a title="games.templatetags.game_filters.register
+portfolios.templatetags.portfolio_filters.register
+users.templatetags.user_filters.register
+users.templatetags.user_session_filters.register" class="py-name" href="#" onclick="return doclink('link-9', 'register', 'link-9');">register</a></tt> <tt class="py-op">=</tt> <tt class="py-name">template</tt><tt class="py-op">.</tt><tt class="py-name">Library</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L11"></a><tt class="py-lineno">11</tt>  <tt class="py-line"> </tt>
+<a name="L12"></a><tt class="py-lineno">12</tt>  <tt class="py-line"> </tt>
+<a name="L13"></a><tt class="py-lineno">13</tt>  <tt class="py-line"><tt class="py-decorator">@</tt><tt class="py-decorator">register</tt><tt class="py-op">.</tt><tt class="py-name">filter</tt><tt class="py-op">(</tt><tt id="link-10" class="py-name" targets="Variable agents.models.Agent.name=agents.models.Agent-class.html#name,Method portfolios.models.Portfolio.name()=portfolios.models.Portfolio-class.html#name"><a title="agents.models.Agent.name
+portfolios.models.Portfolio.name" class="py-name" href="#" onclick="return doclink('link-10', 'name', 'link-10');">name</a></tt><tt class="py-op">=</tt><tt class="py-string">'get_stock_gains'</tt><tt class="py-op">)</tt> </tt>
+<a name="get_stock_gains"></a><div id="get_stock_gains-def"><a name="L14"></a><tt class="py-lineno">14</tt> <a class="py-toggle" href="#" id="get_stock_gains-toggle" onclick="return toggle('get_stock_gains');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="users.templatetags.user_filters-module.html#get_stock_gains">get_stock_gains</a><tt class="py-op">(</tt><tt class="py-param">owned_stock</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="get_stock_gains-collapsed" style="display:none;" pad="++" indent="++++"></div><div id="get_stock_gains-expanded"><a name="L15"></a><tt class="py-lineno">15</tt>  <tt class="py-line">    <tt class="py-name">stock_equity</tt> <tt class="py-op">=</tt> <tt class="py-number">0</tt> </tt>
+<a name="L16"></a><tt class="py-lineno">16</tt>  <tt class="py-line">    <tt class="py-keyword">for</tt> <tt id="link-11" class="py-name" targets="Variable portfolios.forms.TransactionForm.transaction=portfolios.forms.TransactionForm-class.html#transaction"><a title="portfolios.forms.TransactionForm.transaction" class="py-name" href="#" onclick="return doclink('link-11', 'transaction', 'link-11');">transaction</a></tt> <tt class="py-keyword">in</tt> <tt class="py-name">owned_stock</tt><tt class="py-op">.</tt><tt class="py-name">transaction_set</tt><tt class="py-op">.</tt><tt id="link-12" class="py-name" targets="Function stocks.views.all()=stocks.views-module.html#all"><a title="stocks.views.all" class="py-name" href="#" onclick="return doclink('link-12', 'all', 'link-12');">all</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L17"></a><tt class="py-lineno">17</tt>  <tt class="py-line">        <tt class="py-name">stock_equity</tt> <tt class="py-op">+=</tt> <tt id="link-13" class="py-name"><a title="portfolios.forms.TransactionForm.transaction" class="py-name" href="#" onclick="return doclink('link-13', 'transaction', 'link-11');">transaction</a></tt><tt class="py-op">.</tt><tt id="link-14" class="py-name" targets="Variable portfolios.models.Transaction.trans_price=portfolios.models.Transaction-class.html#trans_price"><a title="portfolios.models.Transaction.trans_price" class="py-name" href="#" onclick="return doclink('link-14', 'trans_price', 'link-14');">trans_price</a></tt> <tt class="py-op">*</tt> <tt id="link-15" class="py-name"><a title="portfolios.forms.TransactionForm.transaction" class="py-name" href="#" onclick="return doclink('link-15', 'transaction', 'link-11');">transaction</a></tt><tt class="py-op">.</tt><tt id="link-16" class="py-name" targets="Variable portfolios.models.Transaction.trans_quantity=portfolios.models.Transaction-class.html#trans_quantity"><a title="portfolios.models.Transaction.trans_quantity" class="py-name" href="#" onclick="return doclink('link-16', 'trans_quantity', 'link-16');">trans_quantity</a></tt> </tt>
+<a name="L18"></a><tt class="py-lineno">18</tt>  <tt class="py-line">    <tt id="link-17" class="py-name" targets="Variable portfolios.forms.OrderForm.stock=portfolios.forms.OrderForm-class.html#stock,Variable portfolios.forms.TransactionForm.stock=portfolios.forms.TransactionForm-class.html#stock"><a title="portfolios.forms.OrderForm.stock
+portfolios.forms.TransactionForm.stock" class="py-name" href="#" onclick="return doclink('link-17', 'stock', 'link-17');">stock</a></tt> <tt class="py-op">=</tt> <tt id="link-18" class="py-name"><a title="stocks.api" class="py-name" href="#" onclick="return doclink('link-18', 'api', 'link-7');">api</a></tt><tt class="py-op">.</tt><tt id="link-19" class="py-name" targets="Function stocks.api.get_stock()=stocks.api-module.html#get_stock"><a title="stocks.api.get_stock" class="py-name" href="#" onclick="return doclink('link-19', 'get_stock', 'link-19');">get_stock</a></tt><tt class="py-op">(</tt><tt class="py-name">owned_stock</tt><tt class="py-op">.</tt><tt id="link-20" class="py-name" targets="Variable portfolios.models.Orders.ticker=portfolios.models.Orders-class.html#ticker,Variable portfolios.models.OwnedStock.ticker=portfolios.models.OwnedStock-class.html#ticker,Variable stocks.models.Stock.ticker=stocks.models.Stock-class.html#ticker,Variable stocks.models.StockTicker.ticker=stocks.models.StockTicker-class.html#ticker"><a title="portfolios.models.Orders.ticker
+portfolios.models.OwnedStock.ticker
+stocks.models.Stock.ticker
+stocks.models.StockTicker.ticker" class="py-name" href="#" onclick="return doclink('link-20', 'ticker', 'link-20');">ticker</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L19"></a><tt class="py-lineno">19</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt class="py-op">(</tt><tt id="link-21" class="py-name"><a title="portfolios.forms.OrderForm.stock
+portfolios.forms.TransactionForm.stock" class="py-name" href="#" onclick="return doclink('link-21', 'stock', 'link-17');">stock</a></tt><tt class="py-op">.</tt><tt id="link-22" class="py-name" targets="Variable stocks.models.Stock.current_price=stocks.models.Stock-class.html#current_price"><a title="stocks.models.Stock.current_price" class="py-name" href="#" onclick="return doclink('link-22', 'current_price', 'link-22');">current_price</a></tt> <tt class="py-op">*</tt> <tt class="py-name">owned_stock</tt><tt class="py-op">.</tt><tt id="link-23" class="py-name" targets="Variable portfolios.forms.OrderForm.quantity=portfolios.forms.OrderForm-class.html#quantity,Variable portfolios.forms.TransactionForm.quantity=portfolios.forms.TransactionForm-class.html#quantity,Variable portfolios.models.OwnedStock.quantity=portfolios.models.OwnedStock-class.html#quantity"><a title="portfolios.forms.OrderForm.quantity
+portfolios.forms.TransactionForm.quantity
+portfolios.models.OwnedStock.quantity" class="py-name" href="#" onclick="return doclink('link-23', 'quantity', 'link-23');">quantity</a></tt><tt class="py-op">)</tt> <tt class="py-op">-</tt> <tt class="py-name">stock_equity</tt> </tt>
+</div><a name="L20"></a><tt class="py-lineno">20</tt>  <tt class="py-line"> </tt>
+<a name="list_owned"></a><div id="list_owned-def"><a name="L21"></a><tt class="py-lineno">21</tt>  <tt class="py-line"> </tt>
+<a name="L22"></a><tt class="py-lineno">22</tt>  <tt class="py-line"><tt class="py-decorator">@</tt><tt class="py-decorator">register</tt><tt class="py-op">.</tt><tt class="py-name">inclusion_tag</tt><tt class="py-op">(</tt><tt class="py-string">'users/_owned.html'</tt><tt class="py-op">)</tt> </tt>
+<a name="L23"></a><tt class="py-lineno">23</tt> <a class="py-toggle" href="#" id="list_owned-toggle" onclick="return toggle('list_owned');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="users.templatetags.user_filters-module.html#list_owned">list_owned</a><tt class="py-op">(</tt><tt class="py-param">portfolio</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="list_owned-collapsed" style="display:none;" pad="++" indent="++++"></div><div id="list_owned-expanded"><a name="L24"></a><tt class="py-lineno">24</tt>  <tt class="py-line">    <tt class="py-name">owned_stocks</tt> <tt class="py-op">=</tt> <tt id="link-24" class="py-name" targets="Variable portfolios.models.OwnedStock.portfolio=portfolios.models.OwnedStock-class.html#portfolio"><a title="portfolios.models.OwnedStock.portfolio" class="py-name" href="#" onclick="return doclink('link-24', 'portfolio', 'link-24');">portfolio</a></tt><tt class="py-op">.</tt><tt id="link-25" class="py-name" targets="Method portfolios.models.Portfolio.get_brief_stocks()=portfolios.models.Portfolio-class.html#get_brief_stocks"><a title="portfolios.models.Portfolio.get_brief_stocks" class="py-name" href="#" onclick="return doclink('link-25', 'get_brief_stocks', 'link-25');">get_brief_stocks</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L25"></a><tt class="py-lineno">25</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt class="py-op">{</tt><tt class="py-string">'owned_stocks'</tt><tt class="py-op">:</tt> <tt class="py-name">owned_stocks</tt><tt class="py-op">}</tt> </tt>
+</div><a name="L26"></a><tt class="py-lineno">26</tt>  <tt class="py-line"> </tt>
+<a name="list_watched"></a><div id="list_watched-def"><a name="L27"></a><tt class="py-lineno">27</tt>  <tt class="py-line"> </tt>
+<a name="L28"></a><tt class="py-lineno">28</tt>  <tt class="py-line"><tt class="py-decorator">@</tt><tt class="py-decorator">register</tt><tt class="py-op">.</tt><tt class="py-name">inclusion_tag</tt><tt class="py-op">(</tt><tt class="py-string">'users/_watched.html'</tt><tt class="py-op">)</tt> </tt>
+<a name="L29"></a><tt class="py-lineno">29</tt> <a class="py-toggle" href="#" id="list_watched-toggle" onclick="return toggle('list_watched');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="users.templatetags.user_filters-module.html#list_watched">list_watched</a><tt class="py-op">(</tt><tt class="py-param">portfolio</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="list_watched-collapsed" style="display:none;" pad="++" indent="++++"></div><div id="list_watched-expanded"><a name="L30"></a><tt class="py-lineno">30</tt>  <tt class="py-line">    <tt class="py-name">watched_stocks</tt> <tt class="py-op">=</tt> <tt id="link-26" class="py-name"><a title="portfolios.models.OwnedStock.portfolio" class="py-name" href="#" onclick="return doclink('link-26', 'portfolio', 'link-24');">portfolio</a></tt><tt class="py-op">.</tt><tt id="link-27" class="py-name" targets="Method portfolios.models.Portfolio.get_brief_watched()=portfolios.models.Portfolio-class.html#get_brief_watched"><a title="portfolios.models.Portfolio.get_brief_watched" class="py-name" href="#" onclick="return doclink('link-27', 'get_brief_watched', 'link-27');">get_brief_watched</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L31"></a><tt class="py-lineno">31</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt class="py-op">{</tt><tt class="py-string">'owned_stocks'</tt><tt class="py-op">:</tt> <tt class="py-name">watched_stocks</tt><tt class="py-op">}</tt> </tt>
+</div><a name="L32"></a><tt class="py-lineno">32</tt>  <tt class="py-line"> </tt>
+<a name="trade_form"></a><div id="trade_form-def"><a name="L33"></a><tt class="py-lineno">33</tt>  <tt class="py-line"> </tt>
+<a name="L34"></a><tt class="py-lineno">34</tt>  <tt class="py-line"><tt class="py-decorator">@</tt><tt class="py-decorator">register</tt><tt class="py-op">.</tt><tt class="py-name">inclusion_tag</tt><tt class="py-op">(</tt><tt class="py-string">'users/_trade_form.html'</tt><tt class="py-op">)</tt> </tt>
+<a name="L35"></a><tt class="py-lineno">35</tt> <a class="py-toggle" href="#" id="trade_form-toggle" onclick="return toggle('trade_form');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="users.templatetags.user_filters-module.html#trade_form">trade_form</a><tt class="py-op">(</tt><tt class="py-param">stock</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="trade_form-collapsed" style="display:none;" pad="++" indent="++++"></div><div id="trade_form-expanded"><a name="L36"></a><tt class="py-lineno">36</tt>  <tt class="py-line">    <tt class="py-name">form</tt> <tt class="py-op">=</tt> <tt id="link-28" class="py-name"><a title="portfolios.forms.TransactionForm" class="py-name" href="#" onclick="return doclink('link-28', 'TransactionForm', 'link-5');">TransactionForm</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L37"></a><tt class="py-lineno">37</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt class="py-op">{</tt><tt class="py-string">'form'</tt><tt class="py-op">:</tt> <tt class="py-name">form</tt><tt class="py-op">,</tt> <tt class="py-string">'stock'</tt><tt class="py-op">:</tt> <tt id="link-29" class="py-name"><a title="portfolios.forms.OrderForm.stock
+portfolios.forms.TransactionForm.stock" class="py-name" href="#" onclick="return doclink('link-29', 'stock', 'link-17');">stock</a></tt> <tt class="py-op">}</tt> </tt>
+</div><a name="L38"></a><tt class="py-lineno">38</tt>  <tt class="py-line"> </tt>
+<a name="order_form"></a><div id="order_form-def"><a name="L39"></a><tt class="py-lineno">39</tt>  <tt class="py-line"> </tt>
+<a name="L40"></a><tt class="py-lineno">40</tt>  <tt class="py-line"><tt class="py-decorator">@</tt><tt class="py-decorator">register</tt><tt class="py-op">.</tt><tt class="py-name">inclusion_tag</tt><tt class="py-op">(</tt><tt class="py-string">'users/_order_form.html'</tt><tt class="py-op">)</tt> </tt>
+<a name="L41"></a><tt class="py-lineno">41</tt> <a class="py-toggle" href="#" id="order_form-toggle" onclick="return toggle('order_form');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="users.templatetags.user_filters-module.html#order_form">order_form</a><tt class="py-op">(</tt><tt class="py-param">stock</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="order_form-collapsed" style="display:none;" pad="++" indent="++++"></div><div id="order_form-expanded"><a name="L42"></a><tt class="py-lineno">42</tt>  <tt class="py-line">    <tt class="py-name">form</tt> <tt class="py-op">=</tt> <tt id="link-30" class="py-name"><a title="portfolios.forms.OrderForm" class="py-name" href="#" onclick="return doclink('link-30', 'OrderForm', 'link-6');">OrderForm</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L43"></a><tt class="py-lineno">43</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt class="py-op">{</tt><tt class="py-string">'form'</tt><tt class="py-op">:</tt> <tt class="py-name">form</tt><tt class="py-op">,</tt> <tt class="py-string">'stock'</tt><tt class="py-op">:</tt> <tt id="link-31" class="py-name"><a title="portfolios.forms.OrderForm.stock
+portfolios.forms.TransactionForm.stock" class="py-name" href="#" onclick="return doclink('link-31', 'stock', 'link-17');">stock</a></tt> <tt class="py-op">}</tt> </tt>
+</div><a name="L44"></a><tt class="py-lineno">44</tt>  <tt class="py-line"> </tt>
+<a name="L45"></a><tt class="py-lineno">45</tt>  <tt class="py-line"> </tt>
+<a name="L46"></a><tt class="py-lineno">46</tt>  <tt class="py-line"><tt class="py-decorator">@</tt><tt class="py-decorator">register</tt><tt class="py-op">.</tt><tt class="py-name">simple_tag</tt><tt class="py-op">(</tt><tt id="link-32" class="py-name"><a title="agents.models.Agent.name
+portfolios.models.Portfolio.name" class="py-name" href="#" onclick="return doclink('link-32', 'name', 'link-10');">name</a></tt><tt class="py-op">=</tt><tt class="py-string">"current_value"</tt><tt class="py-op">)</tt> </tt>
+<a name="current_value"></a><div id="current_value-def"><a name="L47"></a><tt class="py-lineno">47</tt> <a class="py-toggle" href="#" id="current_value-toggle" onclick="return toggle('current_value');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="users.templatetags.user_filters-module.html#current_value">current_value</a><tt class="py-op">(</tt><tt class="py-param">quantity</tt><tt class="py-op">,</tt> <tt class="py-param">price</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="current_value-collapsed" style="display:none;" pad="++" indent="++++"></div><div id="current_value-expanded"><a name="L48"></a><tt class="py-lineno">48</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt id="link-33" class="py-name"><a title="portfolios.forms.OrderForm.quantity
+portfolios.forms.TransactionForm.quantity
+portfolios.models.OwnedStock.quantity" class="py-name" href="#" onclick="return doclink('link-33', 'quantity', 'link-23');">quantity</a></tt> <tt class="py-op">*</tt> <tt class="py-name">price</tt> </tt>
+</div><a name="L49"></a><tt class="py-lineno">49</tt>  <tt class="py-line"> </tt>
+<a name="activate_portfolio_link"></a><div id="activate_portfolio_link-def"><a name="L50"></a><tt class="py-lineno">50</tt>  <tt class="py-line"> </tt>
+<a name="L51"></a><tt class="py-lineno">51</tt>  <tt class="py-line"><tt class="py-decorator">@</tt><tt class="py-decorator">register</tt><tt class="py-op">.</tt><tt class="py-name">simple_tag</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L52"></a><tt class="py-lineno">52</tt> <a class="py-toggle" href="#" id="activate_portfolio_link-toggle" onclick="return toggle('activate_portfolio_link');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="users.templatetags.user_filters-module.html#activate_portfolio_link">activate_portfolio_link</a><tt class="py-op">(</tt><tt class="py-param">portfolio</tt><tt class="py-op">,</tt> <tt class="py-param">return_address</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="activate_portfolio_link-collapsed" style="display:none;" pad="++" indent="++++"></div><div id="activate_portfolio_link-expanded"><a name="L53"></a><tt class="py-lineno">53</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt class="py-string">"/user/switch_portfolio?portfolio_id=%d&amp;redirect_address=%s"</tt> <tt class="py-op">%</tt> <tt class="py-op">(</tt><tt id="link-34" class="py-name"><a title="portfolios.models.OwnedStock.portfolio" class="py-name" href="#" onclick="return doclink('link-34', 'portfolio', 'link-24');">portfolio</a></tt><tt class="py-op">.</tt><tt class="py-name">pk</tt><tt class="py-op">,</tt> <tt class="py-name">return_address</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L54"></a><tt class="py-lineno">54</tt>  <tt class="py-line"> </tt>
+<a name="L55"></a><tt class="py-lineno">55</tt>  <tt class="py-line"> </tt>
+<a name="L56"></a><tt class="py-lineno">56</tt>  <tt class="py-line"><tt class="py-comment"># @register.filter(name='get_price')</tt> </tt>
+<a name="L57"></a><tt class="py-lineno">57</tt>  <tt class="py-line"><tt class="py-comment"># def get_price(self, stock_ticker):</tt> </tt>
+<a name="L58"></a><tt class="py-lineno">58</tt>  <tt class="py-line"><tt class="py-comment">#     return api.get_price(stock_ticker)</tt> </tt>
+<a name="L59"></a><tt class="py-lineno">59</tt>  <tt class="py-line"> </tt>
+<a name="L60"></a><tt class="py-lineno">60</tt>  <tt class="py-line"><tt class="py-comment"># @register.filter(name='get_change')</tt> </tt>
+<a name="L61"></a><tt class="py-lineno">61</tt>  <tt class="py-line"><tt class="py-comment"># def get_change(self, stock_ticker):</tt> </tt>
+<a name="L62"></a><tt class="py-lineno">62</tt>  <tt class="py-line"><tt class="py-comment">#     return api.get_change(stock_ticker)</tt> </tt>
+<a name="L63"></a><tt class="py-lineno">63</tt>  <tt class="py-line"> </tt>
+<a name="L64"></a><tt class="py-lineno">64</tt>  <tt class="py-line"><tt class="py-comment"># @register.filter(name='get_volume') </tt> </tt>
+<a name="L65"></a><tt class="py-lineno">65</tt>  <tt class="py-line"><tt class="py-comment"># def get_volume(self, stock_ticker):</tt> </tt>
+<a name="L66"></a><tt class="py-lineno">66</tt>  <tt class="py-line"><tt class="py-comment">#     return api.get_volume(stock_ticker)</tt> </tt>
+<a name="L67"></a><tt class="py-lineno">67</tt>  <tt class="py-line"> </tt>
+<a name="L68"></a><tt class="py-lineno">68</tt>  <tt class="py-line"><tt class="py-comment"># @register.filter(name='get_username') </tt> </tt>
+<a name="L69"></a><tt class="py-lineno">69</tt>  <tt class="py-line"><tt class="py-comment"># def get_username(self):</tt> </tt>
+<a name="L70"></a><tt class="py-lineno">70</tt>  <tt class="py-line"><tt class="py-comment">#     profile = UserProfile.objects.get(id=self.user_profile_id)</tt> </tt>
+<a name="L71"></a><tt class="py-lineno">71</tt>  <tt class="py-line"><tt class="py-comment">#     return User.objects.get(id=profile.user_id).username</tt> </tt>
+<a name="L72"></a><tt class="py-lineno">72</tt>  <tt class="py-line"> </tt><script type="text/javascript">
+<!--
+expandto(location.href);
+// -->
+</script>
+</pre>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            ><a class="navbar" target="_top" href="http://www.assembla.com/spaces/cis422f12_team2/wiki/">Trades by Thursday</a></th>
+          </tr></table></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Fri Nov 30 03:02:11 2012
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>
