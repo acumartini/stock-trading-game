@@ -1,8 +1,0 @@
-{% load bootstrap %}
-
-<form action="{% url trade %}" method="POST" class="">
-    {% csrf_token %}
-    {{ form|bootstrap }}
-    <input type="submit" value="Trade" class="btn" />
-    <input type="hidden" name="stock" value="{{ stock.ticker }}" />
-</form>

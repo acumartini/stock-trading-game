@@ -1,6 +1,0 @@
-<form action="{% url make_order %}" method="POST"> {% csrf_token %}
-    {{ form.as_p }}
-
-    <input type="submit" value="Place Order" class="btn" />
-    <input type="hidden" name="stock" value="{{ stock.ticker }}" />
-</form>

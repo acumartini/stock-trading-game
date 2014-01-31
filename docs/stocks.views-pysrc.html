@@ -1,270 +1,0 @@
-<?xml version="1.0" encoding="ascii"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-          "DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<head>
-  <title>stocks.views</title>
-  <link rel="stylesheet" href="epydoc.css" type="text/css" />
-  <script type="text/javascript" src="epydoc.js"></script>
-</head>
-
-<body bgcolor="white" text="black" link="blue" vlink="#204080"
-      alink="#204080">
-<!-- ==================== NAVIGATION BAR ==================== -->
-<table class="navbar" border="0" width="100%" cellpadding="0"
-       bgcolor="#a0c0ff" cellspacing="0">
-  <tr valign="middle">
-
-  <!-- Tree link -->
-      <th>&nbsp;&nbsp;&nbsp;<a
-        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
-
-  <!-- Index link -->
-      <th>&nbsp;&nbsp;&nbsp;<a
-        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
-
-  <!-- Help link -->
-      <th>&nbsp;&nbsp;&nbsp;<a
-        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
-
-  <!-- Project homepage -->
-      <th class="navbar" align="right" width="100%">
-        <table border="0" cellpadding="0" cellspacing="0">
-          <tr><th class="navbar" align="center"
-            ><a class="navbar" target="_top" href="http://www.assembla.com/spaces/cis422f12_team2/wiki/">Trades by Thursday</a></th>
-          </tr></table></th>
-  </tr>
-</table>
-<table width="100%" cellpadding="0" cellspacing="0">
-  <tr valign="top">
-    <td width="100%">
-      <span class="breadcrumbs">
-        Package&nbsp;stocks ::
-        Module&nbsp;views
-      </span>
-    </td>
-    <td>
-      <table cellpadding="0" cellspacing="0">
-        <!-- hide/show private -->
-        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
-    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
-        <tr><td align="right"><span class="options"
-            >[<a href="frames.html" target="_top">frames</a
-            >]&nbsp;|&nbsp;<a href="stocks.views-pysrc.html"
-            target="_top">no&nbsp;frames</a>]</span></td></tr>
-      </table>
-    </td>
-  </tr>
-</table>
-<h1 class="epydoc">Source Code for <a href="stocks.views-module.html">Module stocks.views</a></h1>
-<pre class="py-src">
-<a name="L1"></a><tt class="py-lineno">  1</tt>  <tt class="py-line"><tt class="py-docstring">"""</tt> </tt>
-<a name="L2"></a><tt class="py-lineno">  2</tt>  <tt class="py-line"><tt class="py-docstring">@newfield renders: Renders</tt> </tt>
-<a name="L3"></a><tt class="py-lineno">  3</tt>  <tt class="py-line"><tt class="py-docstring">@newflied redirects: Redirects</tt> </tt>
-<a name="L4"></a><tt class="py-lineno">  4</tt>  <tt class="py-line"><tt class="py-docstring">"""</tt> </tt>
-<a name="L5"></a><tt class="py-lineno">  5</tt>  <tt class="py-line"> </tt>
-<a name="L6"></a><tt class="py-lineno">  6</tt>  <tt class="py-line"><tt class="py-comment"># from django.template import Context, loader</tt> </tt>
-<a name="L7"></a><tt class="py-lineno">  7</tt>  <tt class="py-line"><tt class="py-comment"># from django.http import HttpResponse, HttpResponseRedirect</tt> </tt>
-<a name="L8"></a><tt class="py-lineno">  8</tt>  <tt class="py-line"><tt class="py-comment"># from django.shortcuts import render_to_response,</tt> </tt>
-<a name="L9"></a><tt class="py-lineno">  9</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt class="py-name">django</tt><tt class="py-op">.</tt><tt class="py-name">shortcuts</tt> <tt class="py-keyword">import</tt> <tt class="py-name">render</tt><tt class="py-op">,</tt> <tt class="py-name">redirect</tt><tt class="py-op">,</tt> <tt class="py-name">get_object_or_404</tt> </tt>
-<a name="L10"></a><tt class="py-lineno"> 10</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt class="py-name">stocks</tt><tt class="py-op">.</tt><tt id="link-0" class="py-name" targets="Module agents.models=agents.models-module.html,Module games.models=games.models-module.html,Module portfolios.models=portfolios.models-module.html,Module stocks.models=stocks.models-module.html,Module users.models=users.models-module.html"><a title="agents.models
-games.models
-portfolios.models
-stocks.models
-users.models" class="py-name" href="#" onclick="return doclink('link-0', 'models', 'link-0');">models</a></tt> <tt class="py-keyword">import</tt> <tt id="link-1" class="py-name" targets="Class stocks.models.Stock=stocks.models.Stock-class.html"><a title="stocks.models.Stock" class="py-name" href="#" onclick="return doclink('link-1', 'Stock', 'link-1');">Stock</a></tt> </tt>
-<a name="L11"></a><tt class="py-lineno"> 11</tt>  <tt class="py-line"><tt class="py-comment"># from stocks.models import StockTicker</tt> </tt>
-<a name="L12"></a><tt class="py-lineno"> 12</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt class="py-name">stocks</tt><tt class="py-op">.</tt><tt id="link-2" class="py-name" targets="Module agents.forms=agents.forms-module.html,Module games.forms=games.forms-module.html,Module portfolios.forms=portfolios.forms-module.html,Module users.forms=users.forms-module.html"><a title="agents.forms
-games.forms
-portfolios.forms
-users.forms" class="py-name" href="#" onclick="return doclink('link-2', 'forms', 'link-2');">forms</a></tt> <tt class="py-keyword">import</tt> <tt class="py-name">SearchForm</tt> </tt>
-<a name="L13"></a><tt class="py-lineno"> 13</tt>  <tt class="py-line"> </tt>
-<a name="L14"></a><tt class="py-lineno"> 14</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">stocks</tt><tt class="py-op">.</tt><tt id="link-3" class="py-name" targets="Module stocks.api=stocks.api-module.html"><a title="stocks.api" class="py-name" href="#" onclick="return doclink('link-3', 'api', 'link-3');">api</a></tt> <tt class="py-keyword">as</tt> <tt class="py-name">Api</tt> </tt>
-<a name="L15"></a><tt class="py-lineno"> 15</tt>  <tt class="py-line"><tt class="py-comment"># import urllib</tt> </tt>
-<a name="L16"></a><tt class="py-lineno"> 16</tt>  <tt class="py-line"><tt class="py-comment"># import json</tt> </tt>
-<a name="L17"></a><tt class="py-lineno"> 17</tt>  <tt class="py-line"><tt class="py-comment"># from django.db.models import Q</tt> </tt>
-<a name="L18"></a><tt class="py-lineno"> 18</tt>  <tt class="py-line"><tt class="py-comment"># import datetime</tt> </tt>
-<a name="L19"></a><tt class="py-lineno"> 19</tt>  <tt class="py-line"><tt class="py-comment"># from datetime import timedelta</tt> </tt>
-<a name="L20"></a><tt class="py-lineno"> 20</tt>  <tt class="py-line"><tt class="py-comment"># from datetime import datetime</tt> </tt>
-<a name="L21"></a><tt class="py-lineno"> 21</tt>  <tt class="py-line"><tt class="py-comment"># import copy</tt> </tt>
-<a name="L22"></a><tt class="py-lineno"> 22</tt>  <tt class="py-line"><tt class="py-comment"># import random</tt> </tt>
-<a name="L23"></a><tt class="py-lineno"> 23</tt>  <tt class="py-line"><tt class="py-comment"># import operator </tt> </tt>
-<a name="L24"></a><tt class="py-lineno"> 24</tt>  <tt class="py-line"> </tt>
-<a name="L25"></a><tt class="py-lineno"> 25</tt>  <tt class="py-line"><tt id="link-4" class="py-name" targets="Variable stocks.views.stocksPerPage=stocks.views-module.html#stocksPerPage"><a title="stocks.views.stocksPerPage" class="py-name" href="#" onclick="return doclink('link-4', 'stocksPerPage', 'link-4');">stocksPerPage</a></tt><tt class="py-op">=</tt><tt class="py-number">100</tt> </tt>
-<a name="L26"></a><tt class="py-lineno"> 26</tt>  <tt class="py-line"> </tt>
-<a name="search"></a><div id="search-def"><a name="L27"></a><tt class="py-lineno"> 27</tt> <a class="py-toggle" href="#" id="search-toggle" onclick="return toggle('search');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="stocks.views-module.html#search">search</a><tt class="py-op">(</tt><tt class="py-param">request</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
-</div><div id="search-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="search-expanded"><a name="L28"></a><tt class="py-lineno"> 28</tt>  <tt class="py-line">    <tt class="py-docstring">"""</tt> </tt>
-<a name="L29"></a><tt class="py-lineno"> 29</tt>  <tt class="py-line"><tt class="py-docstring">    Displays a search page for finding a particular stock.</tt> </tt>
-<a name="L30"></a><tt class="py-lineno"> 30</tt>  <tt class="py-line"><tt class="py-docstring">    Finds the stock specified by the search request POST.</tt> </tt>
-<a name="L31"></a><tt class="py-lineno"> 31</tt>  <tt class="py-line"><tt class="py-docstring">    </tt> </tt>
-<a name="L32"></a><tt class="py-lineno"> 32</tt>  <tt class="py-line"><tt class="py-docstring">    @renders: stocks/index.html if there has not been a search</tt> </tt>
-<a name="L33"></a><tt class="py-lineno"> 33</tt>  <tt class="py-line"><tt class="py-docstring">    @redirects: stocks/&lt;stock_ticker&gt; if responding to a successful POST</tt> </tt>
-<a name="L34"></a><tt class="py-lineno"> 34</tt>  <tt class="py-line"><tt class="py-docstring">    """</tt> </tt>
-<a name="L35"></a><tt class="py-lineno"> 35</tt>  <tt class="py-line">     </tt>
-<a name="L36"></a><tt class="py-lineno"> 36</tt>  <tt class="py-line">    <tt class="py-keyword">if</tt> <tt class="py-name">request</tt><tt class="py-op">.</tt><tt class="py-name">method</tt> <tt class="py-op">==</tt> <tt class="py-string">'POST'</tt><tt class="py-op">:</tt> </tt>
-<a name="L37"></a><tt class="py-lineno"> 37</tt>  <tt class="py-line">        <tt class="py-name">form</tt> <tt class="py-op">=</tt> <tt class="py-name">SearchForm</tt><tt class="py-op">(</tt><tt class="py-name">request</tt><tt class="py-op">.</tt><tt class="py-name">POST</tt><tt class="py-op">)</tt> </tt>
-<a name="L38"></a><tt class="py-lineno"> 38</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">form</tt><tt class="py-op">.</tt><tt class="py-name">is_valid</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
-<a name="L39"></a><tt class="py-lineno"> 39</tt>  <tt class="py-line">            <tt id="link-5" class="py-name" targets="Variable portfolios.models.Orders.ticker=portfolios.models.Orders-class.html#ticker,Variable portfolios.models.OwnedStock.ticker=portfolios.models.OwnedStock-class.html#ticker,Variable stocks.models.Stock.ticker=stocks.models.Stock-class.html#ticker,Variable stocks.models.StockTicker.ticker=stocks.models.StockTicker-class.html#ticker"><a title="portfolios.models.Orders.ticker
-portfolios.models.OwnedStock.ticker
-stocks.models.Stock.ticker
-stocks.models.StockTicker.ticker" class="py-name" href="#" onclick="return doclink('link-5', 'ticker', 'link-5');">ticker</a></tt> <tt class="py-op">=</tt> <tt class="py-name">request</tt><tt class="py-op">.</tt><tt class="py-name">POST</tt><tt class="py-op">[</tt><tt class="py-string">'ticker'</tt><tt class="py-op">]</tt> </tt>
-<a name="L40"></a><tt class="py-lineno"> 40</tt>  <tt class="py-line">            <tt class="py-keyword">return</tt> <tt class="py-name">redirect</tt><tt class="py-op">(</tt><tt class="py-string">'/stock/'</tt> <tt class="py-op">+</tt> <tt class="py-name">str</tt><tt class="py-op">(</tt><tt id="link-6" class="py-name"><a title="portfolios.models.Orders.ticker
-portfolios.models.OwnedStock.ticker
-stocks.models.Stock.ticker
-stocks.models.StockTicker.ticker" class="py-name" href="#" onclick="return doclink('link-6', 'ticker', 'link-5');">ticker</a></tt><tt class="py-op">)</tt> <tt class="py-op">+</tt> <tt class="py-string">'/'</tt><tt class="py-op">)</tt> </tt>
-<a name="L41"></a><tt class="py-lineno"> 41</tt>  <tt class="py-line">    <tt class="py-keyword">else</tt><tt class="py-op">:</tt> </tt>
-<a name="L42"></a><tt class="py-lineno"> 42</tt>  <tt class="py-line">        <tt class="py-name">form</tt> <tt class="py-op">=</tt> <tt class="py-name">SearchForm</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
-<a name="L43"></a><tt class="py-lineno"> 43</tt>  <tt class="py-line"> </tt>
-<a name="L44"></a><tt class="py-lineno"> 44</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt class="py-name">render</tt><tt class="py-op">(</tt><tt class="py-name">request</tt><tt class="py-op">,</tt> <tt class="py-string">'stocks/index.html'</tt><tt class="py-op">,</tt> <tt class="py-op">{</tt><tt class="py-string">'form'</tt><tt class="py-op">:</tt> <tt class="py-name">form</tt><tt class="py-op">}</tt><tt class="py-op">)</tt> </tt>
-</div><a name="L45"></a><tt class="py-lineno"> 45</tt>  <tt class="py-line"> </tt>
-<a name="L46"></a><tt class="py-lineno"> 46</tt>  <tt class="py-line"> </tt>
-<a name="detail"></a><div id="detail-def"><a name="L47"></a><tt class="py-lineno"> 47</tt> <a class="py-toggle" href="#" id="detail-toggle" onclick="return toggle('detail');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="stocks.views-module.html#detail">detail</a><tt class="py-op">(</tt><tt class="py-param">request</tt><tt class="py-op">,</tt> <tt class="py-param">ticker</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
-</div><div id="detail-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="detail-expanded"><a name="L48"></a><tt class="py-lineno"> 48</tt>  <tt class="py-line">    <tt class="py-docstring">"""</tt> </tt>
-<a name="L49"></a><tt class="py-lineno"> 49</tt>  <tt class="py-line"><tt class="py-docstring">    Renders a detail view for the given stock.</tt> </tt>
-<a name="L50"></a><tt class="py-lineno"> 50</tt>  <tt class="py-line"><tt class="py-docstring">    </tt> </tt>
-<a name="L51"></a><tt class="py-lineno"> 51</tt>  <tt class="py-line"><tt class="py-docstring">    @renders: stocks/detail.html</tt> </tt>
-<a name="L52"></a><tt class="py-lineno"> 52</tt>  <tt class="py-line"><tt class="py-docstring">    """</tt> </tt>
-<a name="L53"></a><tt class="py-lineno"> 53</tt>  <tt class="py-line">    <tt id="link-7" class="py-name" targets="Variable portfolios.models.OwnedStock.stock_data=portfolios.models.OwnedStock-class.html#stock_data"><a title="portfolios.models.OwnedStock.stock_data" class="py-name" href="#" onclick="return doclink('link-7', 'stock_data', 'link-7');">stock_data</a></tt> <tt class="py-op">=</tt> <tt class="py-name">Api</tt><tt class="py-op">.</tt><tt id="link-8" class="py-name" targets="Function stocks.api.get_stock()=stocks.api-module.html#get_stock"><a title="stocks.api.get_stock" class="py-name" href="#" onclick="return doclink('link-8', 'get_stock', 'link-8');">get_stock</a></tt><tt class="py-op">(</tt><tt id="link-9" class="py-name"><a title="portfolios.models.Orders.ticker
-portfolios.models.OwnedStock.ticker
-stocks.models.Stock.ticker
-stocks.models.StockTicker.ticker" class="py-name" href="#" onclick="return doclink('link-9', 'ticker', 'link-5');">ticker</a></tt><tt class="py-op">)</tt> </tt>
-<a name="L54"></a><tt class="py-lineno"> 54</tt>  <tt class="py-line">    <tt id="link-10" class="py-name"><a title="portfolios.models.OwnedStock.stock_data" class="py-name" href="#" onclick="return doclink('link-10', 'stock_data', 'link-7');">stock_data</a></tt><tt class="py-op">.</tt><tt id="link-11" class="py-name" targets="Variable stocks.models.Stock.searched_count=stocks.models.Stock-class.html#searched_count"><a title="stocks.models.Stock.searched_count" class="py-name" href="#" onclick="return doclink('link-11', 'searched_count', 'link-11');">searched_count</a></tt> <tt class="py-op">+=</tt> <tt class="py-number">1</tt> </tt>
-<a name="L55"></a><tt class="py-lineno"> 55</tt>  <tt class="py-line">    <tt id="link-12" class="py-name"><a title="portfolios.models.OwnedStock.stock_data" class="py-name" href="#" onclick="return doclink('link-12', 'stock_data', 'link-7');">stock_data</a></tt><tt class="py-op">.</tt><tt id="link-13" class="py-name" targets="Method stocks.models.Stock.save()=stocks.models.Stock-class.html#save"><a title="stocks.models.Stock.save" class="py-name" href="#" onclick="return doclink('link-13', 'save', 'link-13');">save</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
-<a name="L56"></a><tt class="py-lineno"> 56</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt class="py-name">render</tt><tt class="py-op">(</tt><tt class="py-name">request</tt><tt class="py-op">,</tt> <tt class="py-string">'stocks/stock.html'</tt><tt class="py-op">,</tt> <tt class="py-op">{</tt><tt class="py-string">'stock'</tt><tt class="py-op">:</tt> <tt id="link-14" class="py-name"><a title="portfolios.models.OwnedStock.stock_data" class="py-name" href="#" onclick="return doclink('link-14', 'stock_data', 'link-7');">stock_data</a></tt><tt class="py-op">}</tt><tt class="py-op">)</tt> </tt>
-</div><a name="L57"></a><tt class="py-lineno"> 57</tt>  <tt class="py-line"> </tt>
-<a name="L58"></a><tt class="py-lineno"> 58</tt>  <tt class="py-line"> </tt>
-<a name="L59"></a><tt class="py-lineno"> 59</tt>  <tt class="py-line"><tt class="py-comment"># The documented line of demarcation.</tt> </tt>
-<a name="L60"></a><tt class="py-lineno"> 60</tt>  <tt class="py-line"> </tt>
-<a name="all"></a><div id="all-def"><a name="L61"></a><tt class="py-lineno"> 61</tt> <a class="py-toggle" href="#" id="all-toggle" onclick="return toggle('all');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="stocks.views-module.html#all">all</a><tt class="py-op">(</tt><tt class="py-param">request</tt><tt class="py-op">,</tt><tt class="py-param">page</tt><tt class="py-op">=</tt><tt class="py-number">1</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
-</div><div id="all-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="all-expanded"><a name="L62"></a><tt class="py-lineno"> 62</tt>  <tt class="py-line">    <tt class="py-keyword">global</tt> <tt id="link-15" class="py-name"><a title="stocks.views.stocksPerPage" class="py-name" href="#" onclick="return doclink('link-15', 'stocksPerPage', 'link-4');">stocksPerPage</a></tt> </tt>
-<a name="L63"></a><tt class="py-lineno"> 63</tt>  <tt class="py-line">    <tt class="py-name">p</tt><tt class="py-op">=</tt><tt class="py-name">int</tt><tt class="py-op">(</tt><tt class="py-name">page</tt><tt class="py-op">)</tt> </tt>
-<a name="L64"></a><tt class="py-lineno"> 64</tt>  <tt class="py-line">    <tt class="py-keyword">if</tt> <tt class="py-name">p</tt><tt class="py-op">&lt;=</tt><tt class="py-number">0</tt><tt class="py-op">:</tt> </tt>
-<a name="L65"></a><tt class="py-lineno"> 65</tt>  <tt class="py-line">        <tt class="py-name">p</tt><tt class="py-op">=</tt><tt class="py-number">1</tt> </tt>
-<a name="L66"></a><tt class="py-lineno"> 66</tt>  <tt class="py-line">    <tt class="py-name">allstocks</tt> <tt class="py-op">=</tt> <tt id="link-16" class="py-name" targets="Function stocks.api.get_stocks()=stocks.api-module.html#get_stocks"><a title="stocks.api.get_stocks" class="py-name" href="#" onclick="return doclink('link-16', 'get_stocks', 'link-16');">get_stocks</a></tt><tt class="py-op">(</tt><tt class="py-name">get_tickers_string_from_db</tt><tt class="py-op">(</tt><tt class="py-name">p</tt><tt class="py-op">,</tt> <tt id="link-17" class="py-name"><a title="stocks.views.stocksPerPage" class="py-name" href="#" onclick="return doclink('link-17', 'stocksPerPage', 'link-4');">stocksPerPage</a></tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
-<a name="L67"></a><tt class="py-lineno"> 67</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt class="py-name">render_to_response</tt><tt class="py-op">(</tt><tt class="py-string">'stocks/stocks.html'</tt><tt class="py-op">,</tt> <tt class="py-op">{</tt><tt class="py-string">'all_stocks'</tt><tt class="py-op">:</tt> <tt class="py-name">allstocks</tt><tt class="py-op">}</tt><tt class="py-op">)</tt>     </tt>
-</div><a name="L68"></a><tt class="py-lineno"> 68</tt>  <tt class="py-line"> </tt>
-<a name="L69"></a><tt class="py-lineno"> 69</tt>  <tt class="py-line"> </tt>
-<a name="L70"></a><tt class="py-lineno"> 70</tt>  <tt class="py-line"> </tt>
-<a name="get_mostSearched"></a><div id="get_mostSearched-def"><a name="L71"></a><tt class="py-lineno"> 71</tt> <a class="py-toggle" href="#" id="get_mostSearched-toggle" onclick="return toggle('get_mostSearched');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="stocks.views-module.html#get_mostSearched">get_mostSearched</a><tt class="py-op">(</tt><tt class="py-param">request</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
-</div><div id="get_mostSearched-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="get_mostSearched-expanded"><a name="L72"></a><tt class="py-lineno"> 72</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt class="py-name">render_to_response</tt><tt class="py-op">(</tt><tt class="py-string">'stocks/stocks_mostSearched.html'</tt><tt class="py-op">,</tt> <tt class="py-op">{</tt><tt class="py-string">'all_stocks'</tt><tt class="py-op">:</tt> <tt class="py-name">mostSearched</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">}</tt><tt class="py-op">)</tt> </tt>
-</div><a name="L73"></a><tt class="py-lineno"> 73</tt>  <tt class="py-line"> </tt>
-<a name="L74"></a><tt class="py-lineno"> 74</tt>  <tt class="py-line"> </tt>
-<a name="get_mostTrades"></a><div id="get_mostTrades-def"><a name="L75"></a><tt class="py-lineno"> 75</tt> <a class="py-toggle" href="#" id="get_mostTrades-toggle" onclick="return toggle('get_mostTrades');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="stocks.views-module.html#get_mostTrades">get_mostTrades</a><tt class="py-op">(</tt><tt class="py-param">request</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
-</div><div id="get_mostTrades-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="get_mostTrades-expanded"><a name="L76"></a><tt class="py-lineno"> 76</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt class="py-name">render_to_response</tt><tt class="py-op">(</tt><tt class="py-string">'stocks/stocks_mostTrades.html'</tt><tt class="py-op">,</tt> <tt class="py-op">{</tt><tt class="py-string">'all_stocks'</tt><tt class="py-op">:</tt> <tt class="py-name">mostTrades</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">}</tt><tt class="py-op">)</tt> </tt>
-</div><a name="L77"></a><tt class="py-lineno"> 77</tt>  <tt class="py-line"> </tt>
-<a name="L78"></a><tt class="py-lineno"> 78</tt>  <tt class="py-line"> </tt>
-<a name="get_top"></a><div id="get_top-def"><a name="L79"></a><tt class="py-lineno"> 79</tt> <a class="py-toggle" href="#" id="get_top-toggle" onclick="return toggle('get_top');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="stocks.views-module.html#get_top">get_top</a><tt class="py-op">(</tt><tt class="py-param">request</tt><tt class="py-op">,</tt> <tt class="py-param">reverseSort</tt><tt class="py-op">=</tt><tt class="py-string">"desc"</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
-</div><div id="get_top-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="get_top-expanded"><a name="L80"></a><tt class="py-lineno"> 80</tt>  <tt class="py-line">    <tt id="link-18" class="py-name" targets="Method stocks.models.StockManager.top20()=stocks.models.StockManager-class.html#top20"><a title="stocks.models.StockManager.top20" class="py-name" href="#" onclick="return doclink('link-18', 'top20', 'link-18');">top20</a></tt> <tt class="py-op">=</tt> <tt id="link-19" class="py-name"><a title="stocks.models.Stock" class="py-name" href="#" onclick="return doclink('link-19', 'Stock', 'link-1');">Stock</a></tt><tt class="py-op">.</tt><tt id="link-20" class="py-name" targets="Variable agents.models.Agent.objects=agents.models.Agent-class.html#objects,Variable stocks.models.Stock.objects=stocks.models.Stock-class.html#objects"><a title="agents.models.Agent.objects
-stocks.models.Stock.objects" class="py-name" href="#" onclick="return doclink('link-20', 'objects', 'link-20');">objects</a></tt><tt class="py-op">.</tt><tt id="link-21" class="py-name"><a title="stocks.models.StockManager.top20" class="py-name" href="#" onclick="return doclink('link-21', 'top20', 'link-18');">top20</a></tt><tt class="py-op">(</tt><tt class="py-string">'current_price'</tt><tt class="py-op">)</tt> </tt>
-<a name="L81"></a><tt class="py-lineno"> 81</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt class="py-name">render_to_response</tt><tt class="py-op">(</tt><tt class="py-string">'stocks/stocks.html'</tt><tt class="py-op">,</tt> <tt class="py-op">{</tt><tt class="py-string">'all_stocks'</tt><tt class="py-op">:</tt> <tt id="link-22" class="py-name"><a title="stocks.models.StockManager.top20" class="py-name" href="#" onclick="return doclink('link-22', 'top20', 'link-18');">top20</a></tt><tt class="py-op">}</tt><tt class="py-op">)</tt> </tt>
-</div><a name="L82"></a><tt class="py-lineno"> 82</tt>  <tt class="py-line"> </tt>
-<a name="L83"></a><tt class="py-lineno"> 83</tt>  <tt class="py-line"> </tt>
-<a name="L84"></a><tt class="py-lineno"> 84</tt>  <tt class="py-line"> </tt>
-<a name="get_history"></a><div id="get_history-def"><a name="L85"></a><tt class="py-lineno"> 85</tt> <a class="py-toggle" href="#" id="get_history-toggle" onclick="return toggle('get_history');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="stocks.views-module.html#get_history">get_history</a><tt class="py-op">(</tt><tt class="py-param">request</tt><tt class="py-op">,</tt> <tt class="py-param">ticker</tt><tt class="py-op">,</tt> <tt class="py-param">daysbefore</tt><tt class="py-op">=</tt><tt class="py-number">15</tt><tt class="py-op">,</tt> <tt class="py-param">startDate</tt><tt class="py-op">=</tt><tt class="py-string">''</tt> <tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
-</div><div id="get_history-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="get_history-expanded"><a name="L86"></a><tt class="py-lineno"> 86</tt>  <tt class="py-line">    <tt class="py-name">endDate</tt> <tt class="py-op">=</tt> <tt class="py-string">""</tt><tt class="py-op">;</tt> </tt>
-<a name="L87"></a><tt class="py-lineno"> 87</tt>  <tt class="py-line">    <tt class="py-name">now</tt> <tt class="py-op">=</tt> <tt class="py-name">datetime</tt><tt class="py-op">.</tt><tt class="py-name">now</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
-<a name="L88"></a><tt class="py-lineno"> 88</tt>  <tt class="py-line">    <tt class="py-keyword">if</tt> <tt class="py-name">startDate</tt><tt class="py-op">==</tt><tt class="py-string">''</tt> <tt class="py-keyword">or</tt> <tt class="py-op">(</tt><tt class="py-name">datetime</tt><tt class="py-op">.</tt><tt class="py-name">strptime</tt><tt class="py-op">(</tt><tt class="py-name">startDate</tt><tt class="py-op">,</tt> <tt class="py-string">"%Y%m%d"</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> <tt class="py-op">&gt;</tt> <tt class="py-name">now</tt><tt class="py-op">:</tt> </tt>
-<a name="L89"></a><tt class="py-lineno"> 89</tt>  <tt class="py-line">         </tt>
-<a name="L90"></a><tt class="py-lineno"> 90</tt>  <tt class="py-line">        <tt class="py-name">sdt</tt> <tt class="py-op">=</tt> <tt class="py-name">now</tt> <tt class="py-op">-</tt> <tt class="py-name">timedelta</tt><tt class="py-op">(</tt><tt class="py-name">days</tt><tt class="py-op">=</tt><tt class="py-name">int</tt><tt class="py-op">(</tt><tt class="py-name">float</tt><tt class="py-op">(</tt><tt class="py-name">daysbefore</tt><tt class="py-op">)</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
-<a name="L91"></a><tt class="py-lineno"> 91</tt>  <tt class="py-line">        <tt class="py-name">endDate</tt> <tt class="py-op">=</tt> <tt class="py-name">sdt</tt><tt class="py-op">.</tt><tt class="py-name">strftime</tt><tt class="py-op">(</tt><tt class="py-string">"%Y-%m-%d"</tt><tt class="py-op">)</tt> <tt class="py-comment">#sd.year + "-" + sd.month + "-" + sd.day</tt> </tt>
-<a name="L92"></a><tt class="py-lineno"> 92</tt>  <tt class="py-line">        <tt class="py-name">sd</tt> <tt class="py-op">=</tt> <tt class="py-name">now</tt><tt class="py-op">.</tt><tt class="py-name">strftime</tt><tt class="py-op">(</tt><tt class="py-string">"%Y-%m-%d"</tt><tt class="py-op">)</tt> </tt>
-<a name="L93"></a><tt class="py-lineno"> 93</tt>  <tt class="py-line">    <tt class="py-keyword">else</tt><tt class="py-op">:</tt> </tt>
-<a name="L94"></a><tt class="py-lineno"> 94</tt>  <tt class="py-line">        <tt class="py-name">sd</tt> <tt class="py-op">=</tt> <tt class="py-op">(</tt><tt class="py-name">datetime</tt><tt class="py-op">.</tt><tt class="py-name">strptime</tt><tt class="py-op">(</tt><tt class="py-name">startDate</tt><tt class="py-op">,</tt> <tt class="py-string">"%Y%m%d"</tt><tt class="py-op">)</tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt class="py-name">strftime</tt><tt class="py-op">(</tt><tt class="py-string">"%Y-%m-%d"</tt><tt class="py-op">)</tt> </tt>
-<a name="L95"></a><tt class="py-lineno"> 95</tt>  <tt class="py-line">        <tt class="py-name">endDate</tt> <tt class="py-op">=</tt> <tt class="py-op">(</tt><tt class="py-name">datetime</tt><tt class="py-op">.</tt><tt class="py-name">strptime</tt><tt class="py-op">(</tt><tt class="py-name">startDate</tt><tt class="py-op">,</tt><tt class="py-string">"%Y%m%d"</tt><tt class="py-op">)</tt> <tt class="py-op">-</tt> <tt class="py-name">timedelta</tt><tt class="py-op">(</tt><tt class="py-name">days</tt><tt class="py-op">=</tt><tt class="py-name">int</tt><tt class="py-op">(</tt><tt class="py-name">float</tt><tt class="py-op">(</tt><tt class="py-name">daysbefore</tt><tt class="py-op">)</tt><tt class="py-op">)</tt><tt class="py-op">)</tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt class="py-name">strftime</tt><tt class="py-op">(</tt><tt class="py-string">"%Y-%m-%d"</tt><tt class="py-op">)</tt> </tt>
-<a name="L96"></a><tt class="py-lineno"> 96</tt>  <tt class="py-line">    <tt class="py-name">stockhistorylist</tt> <tt class="py-op">=</tt> <tt class="py-name">Api</tt><tt class="py-op">.</tt><tt id="link-23" class="py-name" targets="Function stocks.api.query_history()=stocks.api-module.html#query_history"><a title="stocks.api.query_history" class="py-name" href="#" onclick="return doclink('link-23', 'query_history', 'link-23');">query_history</a></tt><tt class="py-op">(</tt><tt id="link-24" class="py-name"><a title="portfolios.models.Orders.ticker
-portfolios.models.OwnedStock.ticker
-stocks.models.Stock.ticker
-stocks.models.StockTicker.ticker" class="py-name" href="#" onclick="return doclink('link-24', 'ticker', 'link-5');">ticker</a></tt><tt class="py-op">,</tt> <tt class="py-name">endDate</tt><tt class="py-op">,</tt><tt class="py-name">sd</tt><tt class="py-op">)</tt> </tt>
-<a name="L97"></a><tt class="py-lineno"> 97</tt>  <tt class="py-line">    <tt class="py-name">sl</tt> <tt class="py-op">=</tt> <tt id="link-25" class="py-name" targets="Function stocks.views.add_weekends_data()=stocks.views-module.html#add_weekends_data"><a title="stocks.views.add_weekends_data" class="py-name" href="#" onclick="return doclink('link-25', 'add_weekends_data', 'link-25');">add_weekends_data</a></tt><tt class="py-op">(</tt><tt class="py-name">stockhistorylist</tt><tt class="py-op">,</tt> <tt class="py-name">int</tt><tt class="py-op">(</tt><tt class="py-name">float</tt><tt class="py-op">(</tt><tt class="py-name">daysbefore</tt><tt class="py-op">)</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
-<a name="L98"></a><tt class="py-lineno"> 98</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt class="py-name">render_to_response</tt><tt class="py-op">(</tt><tt class="py-string">'stocks/stock_history.html'</tt><tt class="py-op">,</tt> <tt class="py-op">{</tt><tt class="py-string">'stockhistory'</tt><tt class="py-op">:</tt> <tt class="py-name">sl</tt><tt class="py-op">}</tt><tt class="py-op">)</tt>  </tt>
-</div><a name="L99"></a><tt class="py-lineno"> 99</tt>  <tt class="py-line"> </tt>
-<a name="L100"></a><tt class="py-lineno">100</tt>  <tt class="py-line"> </tt>
-<a name="add_weekends_data"></a><div id="add_weekends_data-def"><a name="L101"></a><tt class="py-lineno">101</tt> <a class="py-toggle" href="#" id="add_weekends_data-toggle" onclick="return toggle('add_weekends_data');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="stocks.views-module.html#add_weekends_data">add_weekends_data</a><tt class="py-op">(</tt><tt class="py-param">data</tt><tt class="py-op">,</tt> <tt class="py-param">numofdays</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
-</div><div id="add_weekends_data-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="add_weekends_data-expanded"><a name="L102"></a><tt class="py-lineno">102</tt>  <tt class="py-line">    <tt class="py-name">startDate</tt> <tt class="py-op">=</tt> <tt class="py-name">data</tt><tt class="py-op">[</tt><tt class="py-op">-</tt><tt class="py-number">1</tt><tt class="py-op">]</tt><tt class="py-op">[</tt><tt class="py-string">'date'</tt><tt class="py-op">]</tt> </tt>
-<a name="L103"></a><tt class="py-lineno">103</tt>  <tt class="py-line">    <tt class="py-name">allDays_data</tt><tt class="py-op">=</tt><tt class="py-op">[</tt><tt class="py-op">]</tt> </tt>
-<a name="L104"></a><tt class="py-lineno">104</tt>  <tt class="py-line">     </tt>
-<a name="L105"></a><tt class="py-lineno">105</tt>  <tt class="py-line">    <tt class="py-name">current_date</tt> <tt class="py-op">=</tt> <tt class="py-name">datetime</tt><tt class="py-op">.</tt><tt class="py-name">strptime</tt><tt class="py-op">(</tt><tt class="py-name">data</tt><tt class="py-op">[</tt><tt class="py-op">-</tt><tt class="py-number">1</tt><tt class="py-op">]</tt><tt class="py-op">[</tt><tt class="py-string">'date'</tt><tt class="py-op">]</tt><tt class="py-op">,</tt><tt class="py-string">"%Y-%m-%d"</tt><tt class="py-op">)</tt> </tt>
-<a name="L106"></a><tt class="py-lineno">106</tt>  <tt class="py-line">    <tt class="py-name">current_index</tt><tt class="py-op">=</tt><tt class="py-number">1</tt> </tt>
-<a name="L107"></a><tt class="py-lineno">107</tt>  <tt class="py-line">    <tt class="py-name">lastData</tt> <tt class="py-op">=</tt> <tt class="py-name">data</tt><tt class="py-op">[</tt><tt class="py-number">0</tt><tt class="py-op">-</tt><tt class="py-name">current_index</tt><tt class="py-op">]</tt> </tt>
-<a name="L108"></a><tt class="py-lineno">108</tt>  <tt class="py-line">    <tt class="py-comment">#allDays_data.append(lastData)</tt> </tt>
-<a name="L109"></a><tt class="py-lineno">109</tt>  <tt class="py-line">    <tt class="py-name">leng</tt> <tt class="py-op">=</tt> <tt class="py-name">len</tt><tt class="py-op">(</tt><tt class="py-name">data</tt><tt class="py-op">)</tt> </tt>
-<a name="L110"></a><tt class="py-lineno">110</tt>  <tt class="py-line">    <tt class="py-keyword">for</tt> <tt id="link-26" class="py-name" targets="Function games.views.index()=games.views-module.html#index,Function users.views.index()=users.views-module.html#index"><a title="games.views.index
-users.views.index" class="py-name" href="#" onclick="return doclink('link-26', 'index', 'link-26');">index</a></tt> <tt class="py-keyword">in</tt> <tt class="py-name">range</tt><tt class="py-op">(</tt><tt class="py-number">1</tt><tt class="py-op">,</tt> <tt class="py-name">numofdays</tt><tt class="py-op">+</tt><tt class="py-number">1</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
-<a name="L111"></a><tt class="py-lineno">111</tt>  <tt class="py-line"> </tt>
-<a name="L112"></a><tt class="py-lineno">112</tt>  <tt class="py-line"> </tt>
-<a name="L113"></a><tt class="py-lineno">113</tt>  <tt class="py-line">        <tt class="py-name">d</tt> <tt class="py-op">=</tt> <tt class="py-name">data</tt><tt class="py-op">[</tt><tt class="py-number">0</tt><tt class="py-op">-</tt><tt class="py-name">current_index</tt><tt class="py-op">]</tt> </tt>
-<a name="L114"></a><tt class="py-lineno">114</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">current_date</tt><tt class="py-op">.</tt><tt class="py-name">strftime</tt><tt class="py-op">(</tt><tt class="py-string">"%Y-%m-%d"</tt><tt class="py-op">)</tt><tt class="py-op">==</tt><tt class="py-name">d</tt><tt class="py-op">[</tt><tt class="py-string">'date'</tt><tt class="py-op">]</tt><tt class="py-op">:</tt> </tt>
-<a name="L115"></a><tt class="py-lineno">115</tt>  <tt class="py-line">            <tt class="py-name">allDays_data</tt><tt class="py-op">.</tt><tt class="py-name">append</tt><tt class="py-op">(</tt><tt class="py-name">d</tt><tt class="py-op">)</tt> </tt>
-<a name="L116"></a><tt class="py-lineno">116</tt>  <tt class="py-line">            <tt class="py-name">lastData</tt> <tt class="py-op">=</tt> <tt class="py-name">data</tt><tt class="py-op">[</tt><tt class="py-number">0</tt><tt class="py-op">-</tt><tt class="py-name">current_index</tt><tt class="py-op">]</tt> </tt>
-<a name="L117"></a><tt class="py-lineno">117</tt>  <tt class="py-line">            <tt class="py-name">current_index</tt> <tt class="py-op">+=</tt> <tt class="py-number">1</tt> </tt>
-<a name="L118"></a><tt class="py-lineno">118</tt>  <tt class="py-line">        <tt class="py-keyword">else</tt><tt class="py-op">:</tt> </tt>
-<a name="L119"></a><tt class="py-lineno">119</tt>  <tt class="py-line">            <tt class="py-name">ld</tt> <tt class="py-op">=</tt> <tt class="py-name">copy</tt><tt class="py-op">.</tt><tt class="py-name">copy</tt><tt class="py-op">(</tt><tt class="py-name">lastData</tt><tt class="py-op">)</tt> </tt>
-<a name="L120"></a><tt class="py-lineno">120</tt>  <tt class="py-line">            <tt class="py-name">ld</tt><tt class="py-op">[</tt><tt class="py-string">'date'</tt><tt class="py-op">]</tt><tt class="py-op">=</tt><tt class="py-name">current_date</tt><tt class="py-op">.</tt><tt class="py-name">strftime</tt><tt class="py-op">(</tt><tt class="py-string">"%Y-%m-%d"</tt><tt class="py-op">)</tt> </tt>
-<a name="L121"></a><tt class="py-lineno">121</tt>  <tt class="py-line">            <tt class="py-name">allDays_data</tt><tt class="py-op">.</tt><tt class="py-name">append</tt><tt class="py-op">(</tt><tt class="py-name">ld</tt><tt class="py-op">)</tt> </tt>
-<a name="L122"></a><tt class="py-lineno">122</tt>  <tt class="py-line"> </tt>
-<a name="L123"></a><tt class="py-lineno">123</tt>  <tt class="py-line">        <tt class="py-name">current_date</tt> <tt class="py-op">=</tt> <tt class="py-name">current_date</tt> <tt class="py-op">+</tt> <tt class="py-name">timedelta</tt><tt class="py-op">(</tt><tt class="py-name">days</tt><tt class="py-op">=</tt><tt class="py-number">1</tt><tt class="py-op">)</tt> </tt>
-<a name="L124"></a><tt class="py-lineno">124</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">current_index</tt> <tt class="py-op">&gt;</tt> <tt class="py-name">leng</tt><tt class="py-op">:</tt> </tt>
-<a name="L125"></a><tt class="py-lineno">125</tt>  <tt class="py-line">            <tt class="py-keyword">break</tt> </tt>
-<a name="L126"></a><tt class="py-lineno">126</tt>  <tt class="py-line">    <tt class="py-string">"""</tt> </tt>
-<a name="L127"></a><tt class="py-lineno">127</tt>  <tt class="py-line"><tt class="py-string">    while current_date &lt; (datetime.now()):</tt> </tt>
-<a name="L128"></a><tt class="py-lineno">128</tt>  <tt class="py-line"><tt class="py-string"></tt> </tt>
-<a name="L129"></a><tt class="py-lineno">129</tt>  <tt class="py-line"><tt class="py-string">        ld = copy.copy(lastData)</tt> </tt>
-<a name="L130"></a><tt class="py-lineno">130</tt>  <tt class="py-line"><tt class="py-string">        ld['date']=current_date.strftime("%Y-%m-%d")</tt> </tt>
-<a name="L131"></a><tt class="py-lineno">131</tt>  <tt class="py-line"><tt class="py-string">        allDays_data.append(ld)</tt> </tt>
-<a name="L132"></a><tt class="py-lineno">132</tt>  <tt class="py-line"><tt class="py-string">        current_date = current_date + timedelta(days=1)</tt> </tt>
-<a name="L133"></a><tt class="py-lineno">133</tt>  <tt class="py-line"><tt class="py-string">    """</tt> </tt>
-<a name="L134"></a><tt class="py-lineno">134</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt class="py-name">allDays_data</tt> </tt>
-</div><a name="L135"></a><tt class="py-lineno">135</tt>  <tt class="py-line"> </tt><script type="text/javascript">
-<!--
-expandto(location.href);
-// -->
-</script>
-</pre>
-<br />
-<!-- ==================== NAVIGATION BAR ==================== -->
-<table class="navbar" border="0" width="100%" cellpadding="0"
-       bgcolor="#a0c0ff" cellspacing="0">
-  <tr valign="middle">
-
-  <!-- Tree link -->
-      <th>&nbsp;&nbsp;&nbsp;<a
-        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
-
-  <!-- Index link -->
-      <th>&nbsp;&nbsp;&nbsp;<a
-        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
-
-  <!-- Help link -->
-      <th>&nbsp;&nbsp;&nbsp;<a
-        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
-
-  <!-- Project homepage -->
-      <th class="navbar" align="right" width="100%">
-        <table border="0" cellpadding="0" cellspacing="0">
-          <tr><th class="navbar" align="center"
-            ><a class="navbar" target="_top" href="http://www.assembla.com/spaces/cis422f12_team2/wiki/">Trades by Thursday</a></th>
-          </tr></table></th>
-  </tr>
-</table>
-<table border="0" cellpadding="0" cellspacing="0" width="100%%">
-  <tr>
-    <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Fri Nov 30 03:02:11 2012
-    </td>
-    <td align="right" class="footer">
-      <a target="mainFrame" href="http://epydoc.sourceforge.net"
-        >http://epydoc.sourceforge.net</a>
-    </td>
-  </tr>
-</table>
-
-<script type="text/javascript">
-  <!--
-  // Private objects are initially displayed (because if
-  // javascript is turned off then we want them to be
-  // visible); but by default, we want to hide them.  So hide
-  // them unless we have a cookie that says to show them.
-  checkCookie();
-  // -->
-</script>
-</body>
-</html>
