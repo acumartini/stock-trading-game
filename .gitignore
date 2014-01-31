@@ -1,0 +1,6 @@
+.DS_store
+sqlite.db
+*.py[cod]
+.project
+.pydevproject
+t.py

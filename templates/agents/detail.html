@@ -1,0 +1,29 @@
+{% extends "app/base.html" %}
+
+{% block title %}{{ agent.name }}{% endblock title %}
+
+{% load user_filters %}
+{% load agent_filters %}
+
+{% block headline %}
+{{ agent.name }}
+{% endblock headline %}
+
+{% block subhead %}
+{{ agent.name }}
+{% endblock subhead %}
+
+{% block content %}
+
+{% if portfolio %}
+<h3>{{ portfolio.game.game_name }}</h3>
+
+<p>Cash: {{ portfolio.cash }} Current Equity: {{ portfolio.get_equity }} Winnings: {{ portfolio.get_winnings }} </p>
+
+<h4>Owned Stocks</h4>
+{% list_agent_owned portfolio %}
+
+<hr>
+{% endif %}
+
+{% endblock content %}

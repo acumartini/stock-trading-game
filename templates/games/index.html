@@ -1,0 +1,32 @@
+{% extends "app/base.html" %}
+
+{% load game_filters %}
+
+{% block title %}Games{% endblock %}
+
+{% block content %}
+
+<a href="{% url games.views.new %}">Create a new game!</a>
+
+{% if all_games %}
+    <h3>Active Games</h3>
+    <ul>
+    {% for game in all_games|get_active_games %}
+            <li><a href="/games/{{ game.game_name }}/">{{ game.game_name }}</a> Start Date: {{ game.start_date }} End Date: {{ game.end_date }} 
+            Total Players: {{ game|get_num_players }}</li>
+    {% endfor %}
+    </ul>
+
+    <h3>Past Games and Results</h3>
+    <ul>
+    {% for game in all_games|get_past_games %}
+            <li>{{ game.game_name }} End Date: {{ game.end_date }} Game Length: {{ game|get_duration }} days Total Players: {{ game|get_num_players }} Winner: {{ game|get_results }}</li>
+    {% endfor %}
+    </ul>
+
+{% else %}
+    <h1>There are no active or past games...</h1>
+{% endif %}
+
+{% endblock content %}
+

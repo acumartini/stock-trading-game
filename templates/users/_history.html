@@ -1,0 +1,19 @@
+
+<table>
+    <thead>
+        <tr>
+            <td>Quantity</td>
+            <td>Price</td>
+            <td>Date</td>
+        </tr>
+    </thead>
+    <tbody>
+        {% for hist in history %}
+        <tr>
+            <td>{{ hist.trans_quantity }}</td>
+            <td>{{ hist.trans_price }}</td>
+            <td>{{ hist.trans_date }}</td>
+        </tr>            
+        {% endfor %}
+    </tbody>
+</table>

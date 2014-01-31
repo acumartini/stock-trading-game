@@ -1,0 +1,23 @@
+
+body {
+    padding-top: 45px;
+}
+
+body.logged_in {
+    padding-top: 90px;
+}
+
+#current_portfolio_bar {
+    margin-top: 41px;
+}
+
+#current_portfolio_bar .navbar-text {
+    padding-left: 15px;
+}
+
+
+#stock-dropdown form {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin:0px;
+}

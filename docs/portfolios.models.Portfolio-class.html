@@ -1,0 +1,662 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>portfolios.models.Portfolio</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            ><a class="navbar" target="_top" href="http://www.assembla.com/spaces/cis422f12_team2/wiki/">Trades by Thursday</a></th>
+          </tr></table></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        Package&nbsp;portfolios ::
+        <a href="portfolios.models-module.html">Module&nbsp;models</a> ::
+        Class&nbsp;Portfolio
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="portfolios.models.Portfolio-class.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- ==================== CLASS DESCRIPTION ==================== -->
+<h1 class="epydoc">Class Portfolio</h1><p class="nomargin-top"><span class="codelink"><a href="portfolios.models-pysrc.html#Portfolio">source&nbsp;code</a></span></p>
+<center>
+<center>  <map id="uml_class_diagram_for_portfoli_5" name="uml_class_diagram_for_portfoli_5">
+<area shape="rect" id="node38" href="portfolios.models.Portfolio-class.html#user_profile" title="portfolios.models.Portfolio.user_profile" alt="" coords="17,31,453,49"/>
+<area shape="rect" id="node38" href="portfolios.models.Portfolio-class.html#agent" title="portfolios.models.Portfolio.agent" alt="" coords="17,49,453,68"/>
+<area shape="rect" id="node38" href="portfolios.models.Portfolio-class.html#game" title="portfolios.models.Portfolio.game" alt="" coords="17,68,453,87"/>
+<area shape="rect" id="node38" href="portfolios.models.Portfolio-class.html#cash" title="portfolios.models.Portfolio.cash" alt="" coords="17,87,453,105"/>
+<area shape="rect" id="node38" href="portfolios.models.Portfolio-class.html#winnings" title="portfolios.models.Portfolio.winnings" alt="" coords="17,105,453,124"/>
+<area shape="rect" id="node38" href="portfolios.models.Portfolio-class.html#active" title="portfolios.models.Portfolio.active" alt="" coords="17,124,453,143"/>
+<area shape="rect" id="node38" href="portfolios.models.Portfolio-class.html#ai_opponent" title="portfolios.models.Portfolio.ai_opponent" alt="" coords="17,143,453,161"/>
+<area shape="rect" id="node38" href="portfolios.models.Portfolio-class.html#name" title="portfolios.models.Portfolio.name" alt="" coords="17,164,453,183"/>
+<area shape="rect" id="node38" href="portfolios.models.Portfolio-class.html#update" title="portfolios.models.Portfolio.update" alt="" coords="17,183,453,201"/>
+<area shape="rect" id="node38" href="portfolios.models.Portfolio-class.html#get_username" title="portfolios.models.Portfolio.get_username" alt="" coords="17,201,453,220"/>
+<area shape="rect" id="node38" href="portfolios.models.Portfolio-class.html#get_winnings" title="portfolios.models.Portfolio.get_winnings" alt="" coords="17,220,453,239"/>
+<area shape="rect" id="node38" href="portfolios.models.Portfolio-class.html#get_equity" title="portfolios.models.Portfolio.get_equity" alt="" coords="17,239,453,257"/>
+<area shape="rect" id="node38" href="portfolios.models.Portfolio-class.html#get_brief_stocks" title="Generates a list of consise summaries for all currently owned stocks." alt="" coords="17,257,453,276"/>
+<area shape="rect" id="node38" href="portfolios.models.Portfolio-class.html#get_brief_watched" title="Generates a list of summaries for all currently watched stocks." alt="" coords="17,276,453,295"/>
+<area shape="rect" id="node38" href="portfolios.models.Portfolio-class.html#watch_stock" title="Adds the given stock to the portfolio&#39;s watch list." alt="" coords="17,295,453,313"/>
+<area shape="rect" id="node38" href="portfolios.models.Portfolio-class.html#unwatch_stock" title="Removes the given stock to the portfolio&#39;s watch list." alt="" coords="17,313,453,332"/>
+<area shape="rect" id="node38" href="portfolios.models.Portfolio-class.html#create_order" title="portfolios.models.Portfolio.create_order" alt="" coords="17,332,453,351"/>
+<area shape="rect" id="node38" href="portfolios.models.Portfolio-class.html#purchase_stock" title="&#39;Purchases&#39; the given number of the given stock." alt="" coords="17,351,453,369"/>
+<area shape="rect" id="node38" href="portfolios.models.Portfolio-class.html#sell_stock" title="&#39;Sells&#39; the given number of the given stock." alt="" coords="17,369,453,388"/>
+<area shape="rect" id="node1" href="portfolios.models.Portfolio-class.html" title="Maintains and manages the state of a users portfolio within a game." alt="" coords="5,6,464,394"/>
+</map>
+  <img src="uml_class_diagram_for_portfoli_5.gif" alt='' usemap="#uml_class_diagram_for_portfoli_5" ismap="ismap" class="graph-without-title" />
+</center>
+</center>
+<hr />
+<p>Maintains and manages the state of a users portfolio within a game. 
+  Tracks the following things:</p>
+  <ul>
+    <li>
+      Money: How much cash the user has to spend on stocks.
+    </li>
+    <li>
+      Stocks: What stocks are owned, what were paid for them.
+    </li>
+    <li>
+      Watchlist: Stocks that the user wants to keep an eye on.
+    </li>
+    <li>
+      History: A transaction history of stock trades.
+    </li>
+  </ul>
+
+<!-- ==================== INSTANCE METHODS ==================== -->
+<a name="section-InstanceMethods"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Instance Methods</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-InstanceMethods"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="name"></a><span class="summary-sig-name">name</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="portfolios.models-pysrc.html#Portfolio.name">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="update"></a><span class="summary-sig-name">update</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="portfolios.models-pysrc.html#Portfolio.update">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="get_username"></a><span class="summary-sig-name">get_username</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="portfolios.models-pysrc.html#Portfolio.get_username">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="get_winnings"></a><span class="summary-sig-name">get_winnings</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="portfolios.models-pysrc.html#Portfolio.get_winnings">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="get_equity"></a><span class="summary-sig-name">get_equity</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="portfolios.models-pysrc.html#Portfolio.get_equity">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="portfolios.models.Portfolio-class.html#get_brief_stocks" class="summary-sig-name">get_brief_stocks</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Generates a list of consise summaries for all currently owned stocks.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="portfolios.models-pysrc.html#Portfolio.get_brief_stocks">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="portfolios.models.Portfolio-class.html#get_brief_watched" class="summary-sig-name">get_brief_watched</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Generates a list of summaries for all currently watched stocks.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="portfolios.models-pysrc.html#Portfolio.get_brief_watched">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="portfolios.models.Portfolio-class.html#watch_stock" class="summary-sig-name">watch_stock</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">stock_ticker</span>)</span><br />
+      Adds the given stock to the portfolio's watch list.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="portfolios.models-pysrc.html#Portfolio.watch_stock">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="portfolios.models.Portfolio-class.html#unwatch_stock" class="summary-sig-name">unwatch_stock</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">stock_ticker</span>)</span><br />
+      Removes the given stock to the portfolio's watch list.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="portfolios.models-pysrc.html#Portfolio.unwatch_stock">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="create_order"></a><span class="summary-sig-name">create_order</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">stock_ticker</span>,
+        <span class="summary-sig-arg">price</span>,
+        <span class="summary-sig-arg">transaction</span>,
+        <span class="summary-sig-arg">trade</span>=<span class="summary-sig-default">'sell'</span>,
+        <span class="summary-sig-arg">quantity</span>=<span class="summary-sig-default">0</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="portfolios.models-pysrc.html#Portfolio.create_order">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="portfolios.models.Portfolio-class.html#purchase_stock" class="summary-sig-name">purchase_stock</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">stock_ticker</span>,
+        <span class="summary-sig-arg">quantity</span>)</span><br />
+      'Purchases' the given number of the given stock.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="portfolios.models-pysrc.html#Portfolio.purchase_stock">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="portfolios.models.Portfolio-class.html#sell_stock" class="summary-sig-name">sell_stock</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">stock_ticker</span>,
+        <span class="summary-sig-arg">quantity</span>)</span><br />
+      'Sells' the given number of the given stock.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="portfolios.models-pysrc.html#Portfolio.sell_stock">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+</table>
+<!-- ==================== CLASS VARIABLES ==================== -->
+<a name="section-ClassVariables"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Class Variables</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-ClassVariables"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="user_profile"></a><span class="summary-name">user_profile</span> = <code title="models.ForeignKey('users.UserProfile', null= True)">models.ForeignKey('users.UserProfile', null= True)</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="agent"></a><span class="summary-name">agent</span> = <code title="models.OneToOneField('agents.Agent', null= True)">models.OneToOneField('agents.Agent', null= True)</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="game"></a><span class="summary-name">game</span> = <code title="models.ForeignKey('games.Game')">models.ForeignKey('games.Game')</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="cash"></a><span class="summary-name">cash</span> = <code title="models.IntegerField()">models.IntegerField()</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="winnings"></a><span class="summary-name">winnings</span> = <code title="models.FloatField()">models.FloatField()</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="active"></a><span class="summary-name">active</span> = <code title="models.BooleanField()">models.BooleanField()</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="ai_opponent"></a><span class="summary-name">ai_opponent</span> = <code title="models.BooleanField()">models.BooleanField()</code>
+    </td>
+  </tr>
+</table>
+<!-- ==================== METHOD DETAILS ==================== -->
+<a name="section-MethodDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Method Details</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-MethodDetails"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+<a name="get_brief_stocks"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">get_brief_stocks</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="portfolios.models-pysrc.html#Portfolio.get_brief_stocks">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Generates a list of consise summaries for all currently owned 
+  stocks.</p>
+  <p>This list should contain:</p>
+  <ul>
+    <li>
+      The company name and ticker.
+    </li>
+    <li>
+      The current price of the stock.
+    </li>
+    <li>
+      The net gain/loss on the owned stocks.
+    </li>
+  </ul>
+  <dl class="fields">
+    <dt>Returns:</dt>
+        <dd>A list of consise summaries.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="get_brief_watched"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">get_brief_watched</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="portfolios.models-pysrc.html#Portfolio.get_brief_watched">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Generates a list of summaries for all currently watched stocks.</p>
+  <p>This list should contain:</p>
+  <ul>
+    <li>
+      The company name and ticker.
+    </li>
+    <li>
+      The current price of the stock.
+    </li>
+    <li>
+      Some useful indicator of recent stock porformance.
+    </li>
+  </ul>
+  <dl class="fields">
+    <dt>Returns:</dt>
+        <dd>A list tuples containing the ownedstock, and the stock object for
+          each watched stock.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="watch_stock"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">watch_stock</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">stock_ticker</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="portfolios.models-pysrc.html#Portfolio.watch_stock">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Adds the given stock to the portfolio's watch list.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>stock</code></strong> - The stock to be added to the watch list.</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="unwatch_stock"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">unwatch_stock</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">stock_ticker</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="portfolios.models-pysrc.html#Portfolio.unwatch_stock">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Removes the given stock to the portfolio's watch list.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>stock</code></strong> - The stock to be removed from the watch list.</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="purchase_stock"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">purchase_stock</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">stock_ticker</span>,
+        <span class="sig-arg">quantity</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="portfolios.models-pysrc.html#Portfolio.purchase_stock">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>'Purchases' the given number of the given stock. Modeling this has 
+  three steps:</p>
+  <ul>
+    <li>
+      Deducting the money from the portfolio
+    </li>
+    <li>
+      Adding the stocks to the list of owned stocks.
+    </li>
+    <li>
+      Adding the transaction to the transaction history.
+    </li>
+  </ul>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>stock</code></strong> - The stock to be purchased.</li>
+        <li><strong class="pname"><code>quantity</code></strong> - The number of stocks to be purchased.</li>
+    </ul></dd>
+    <dt>Returns:</dt>
+        <dd>True if the purchase is successful, else False</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="sell_stock"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">sell_stock</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">stock_ticker</span>,
+        <span class="sig-arg">quantity</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="portfolios.models-pysrc.html#Portfolio.sell_stock">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>'Sells' the given number of the given stock. Modeling this has three 
+  steps:</p>
+  <ul>
+    <li>
+      Removing the stocks from the list of owned stocks.
+    </li>
+    <li>
+      Adding the money to the portfolio
+    </li>
+    <li>
+      Adding the transaction to the transaction history.
+    </li>
+  </ul>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>stock</code></strong> - The stock to be sold.</li>
+        <li><strong class="pname"><code>quantity</code></strong> - The number of stocks to be sold.</li>
+    </ul></dd>
+    <dt>Returns:</dt>
+        <dd>True if the sale is successful, else False</dd>
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            ><a class="navbar" target="_top" href="http://www.assembla.com/spaces/cis422f12_team2/wiki/">Trades by Thursday</a></th>
+          </tr></table></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Fri Nov 30 00:30:43 2012
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

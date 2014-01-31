@@ -1,0 +1,49 @@
+{% extends "app/base.html" %}
+
+{% block content %}
+    
+{% if all_stocks %}
+
+<table class="table">
+    <tr>
+        <th>Company Name</th>
+        <th>Ticker</th>
+        <th>Current Price</th>
+        <th>Volume</th>
+        <th>Open</th>
+        <th>Change</th>
+        <th>Percent</th>
+        <th>Days Low</th>
+        <th>Days High</th>
+        <th>Year Low</th>
+        <th>Year High</th>
+    </tr>
+{% for stock in all_stocks %}
+    <tr>
+        <td><a href="/stock/{{ stock.ticker}}/" >{{ stock.company_name }}  </a>  </td>
+        <td>{{ stock.ticker }}</td>
+        <td>{{ stock.current_price }}</td>
+        <td>{{ stock.volume }}</td>
+        <td>{{ stock.open_price }}</td>  
+        <td>{{ stock.change }}</td>   
+        <td>{{ stock.percent_change }}</td>  
+        <td>{{ stock.days_low }}</td>  
+        <td>{{ stock.days_high }}</td>  
+        <td>{{ stock.year_low }}</td>  
+        <td>{{ stock.year_high }}</td>
+    </tr>
+{% endfor %}
+</table>
+{% else %}
+    <h1>There is not any stock!!!</h1>
+{% endif %}
+
+<ul class="pager">
+    {% if previous > 0 %}
+    <li><a href="/stocks/{{ previous }}">Previous</a></li>        
+    {% endif %}
+    <li><a href="/stocks/{{ next }}">Next</a></li>
+</ul>
+
+{% endblock content %}
+

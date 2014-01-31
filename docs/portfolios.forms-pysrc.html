@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>portfolios.forms</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            ><a class="navbar" target="_top" href="http://www.assembla.com/spaces/cis422f12_team2/wiki/">Trades by Thursday</a></th>
+          </tr></table></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        Package&nbsp;portfolios ::
+        Module&nbsp;forms
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="portfolios.forms-pysrc.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<h1 class="epydoc">Source Code for <a href="portfolios.forms-module.html">Module portfolios.forms</a></h1>
+<pre class="py-src">
+<a name="L1"></a><tt class="py-lineno"> 1</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt class="py-name">django</tt> <tt class="py-keyword">import</tt> <tt id="link-0" class="py-name" targets="Module agents.forms=agents.forms-module.html,Module games.forms=games.forms-module.html,Module portfolios.forms=portfolios.forms-module.html,Module users.forms=users.forms-module.html"><a title="agents.forms
+games.forms
+portfolios.forms
+users.forms" class="py-name" href="#" onclick="return doclink('link-0', 'forms', 'link-0');">forms</a></tt> </tt>
+<a name="L2"></a><tt class="py-lineno"> 2</tt>  <tt class="py-line"> </tt>
+<a name="L3"></a><tt class="py-lineno"> 3</tt>  <tt class="py-line"><tt id="link-1" class="py-name" targets="Variable portfolios.forms.PURCHASE_CHOICES=portfolios.forms-module.html#PURCHASE_CHOICES"><a title="portfolios.forms.PURCHASE_CHOICES" class="py-name" href="#" onclick="return doclink('link-1', 'PURCHASE_CHOICES', 'link-1');">PURCHASE_CHOICES</a></tt> <tt class="py-op">=</tt> <tt class="py-op">(</tt> </tt>
+<a name="L4"></a><tt class="py-lineno"> 4</tt>  <tt class="py-line">    <tt class="py-op">(</tt><tt class="py-string">'BUY'</tt><tt class="py-op">,</tt> <tt class="py-string">"Buy"</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> </tt>
+<a name="L5"></a><tt class="py-lineno"> 5</tt>  <tt class="py-line">    <tt class="py-op">(</tt><tt class="py-string">'SELL'</tt><tt class="py-op">,</tt> <tt class="py-string">"Sell"</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> </tt>
+<a name="L6"></a><tt class="py-lineno"> 6</tt>  <tt class="py-line"><tt class="py-op">)</tt> </tt>
+<a name="L7"></a><tt class="py-lineno"> 7</tt>  <tt class="py-line"> </tt>
+<a name="TransactionForm"></a><div id="TransactionForm-def"><a name="L8"></a><tt class="py-lineno"> 8</tt> <a class="py-toggle" href="#" id="TransactionForm-toggle" onclick="return toggle('TransactionForm');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="portfolios.forms.TransactionForm-class.html">TransactionForm</a><tt class="py-op">(</tt><tt class="py-base-class">forms</tt><tt class="py-op">.</tt><tt class="py-base-class">Form</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="TransactionForm-collapsed" style="display:none;" pad="++" indent="++++"></div><div id="TransactionForm-expanded"><a name="L9"></a><tt class="py-lineno"> 9</tt>  <tt class="py-line">    <tt id="link-2" class="py-name" targets="Variable portfolios.forms.TransactionForm.transaction=portfolios.forms.TransactionForm-class.html#transaction"><a title="portfolios.forms.TransactionForm.transaction" class="py-name" href="#" onclick="return doclink('link-2', 'transaction', 'link-2');">transaction</a></tt> <tt class="py-op">=</tt> <tt id="link-3" class="py-name"><a title="agents.forms
+games.forms
+portfolios.forms
+users.forms" class="py-name" href="#" onclick="return doclink('link-3', 'forms', 'link-0');">forms</a></tt><tt class="py-op">.</tt><tt class="py-name">ChoiceField</tt><tt class="py-op">(</tt><tt class="py-name">required</tt><tt class="py-op">=</tt><tt class="py-name">True</tt><tt class="py-op">,</tt> <tt class="py-name">choices</tt><tt class="py-op">=</tt><tt id="link-4" class="py-name"><a title="portfolios.forms.PURCHASE_CHOICES" class="py-name" href="#" onclick="return doclink('link-4', 'PURCHASE_CHOICES', 'link-1');">PURCHASE_CHOICES</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L10"></a><tt class="py-lineno">10</tt>  <tt class="py-line">    <tt id="link-5" class="py-name" targets="Variable portfolios.forms.OrderForm.quantity=portfolios.forms.OrderForm-class.html#quantity,Variable portfolios.forms.TransactionForm.quantity=portfolios.forms.TransactionForm-class.html#quantity,Variable portfolios.models.OwnedStock.quantity=portfolios.models.OwnedStock-class.html#quantity"><a title="portfolios.forms.OrderForm.quantity
+portfolios.forms.TransactionForm.quantity
+portfolios.models.OwnedStock.quantity" class="py-name" href="#" onclick="return doclink('link-5', 'quantity', 'link-5');">quantity</a></tt> <tt class="py-op">=</tt> <tt id="link-6" class="py-name"><a title="agents.forms
+games.forms
+portfolios.forms
+users.forms" class="py-name" href="#" onclick="return doclink('link-6', 'forms', 'link-0');">forms</a></tt><tt class="py-op">.</tt><tt class="py-name">IntegerField</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L11"></a><tt class="py-lineno">11</tt>  <tt class="py-line">    <tt id="link-7" class="py-name" targets="Variable portfolios.forms.OrderForm.stock=portfolios.forms.OrderForm-class.html#stock,Variable portfolios.forms.TransactionForm.stock=portfolios.forms.TransactionForm-class.html#stock"><a title="portfolios.forms.OrderForm.stock
+portfolios.forms.TransactionForm.stock" class="py-name" href="#" onclick="return doclink('link-7', 'stock', 'link-7');">stock</a></tt> <tt class="py-op">=</tt> <tt id="link-8" class="py-name"><a title="agents.forms
+games.forms
+portfolios.forms
+users.forms" class="py-name" href="#" onclick="return doclink('link-8', 'forms', 'link-0');">forms</a></tt><tt class="py-op">.</tt><tt class="py-name">CharField</tt><tt class="py-op">(</tt><tt class="py-name">widget</tt><tt class="py-op">=</tt><tt id="link-9" class="py-name"><a title="agents.forms
+games.forms
+portfolios.forms
+users.forms" class="py-name" href="#" onclick="return doclink('link-9', 'forms', 'link-0');">forms</a></tt><tt class="py-op">.</tt><tt class="py-name">HiddenInput</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L12"></a><tt class="py-lineno">12</tt>  <tt class="py-line"> </tt>
+<a name="L13"></a><tt class="py-lineno">13</tt>  <tt class="py-line"><tt id="link-10" class="py-name" targets="Variable portfolios.forms.ORDER_CHOICES=portfolios.forms-module.html#ORDER_CHOICES"><a title="portfolios.forms.ORDER_CHOICES" class="py-name" href="#" onclick="return doclink('link-10', 'ORDER_CHOICES', 'link-10');">ORDER_CHOICES</a></tt> <tt class="py-op">=</tt> <tt class="py-op">(</tt> </tt>
+<a name="L14"></a><tt class="py-lineno">14</tt>  <tt class="py-line">    <tt class="py-op">(</tt><tt class="py-string">'STOP_LOSS'</tt><tt class="py-op">,</tt> <tt class="py-string">"Stop Loss"</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> </tt>
+<a name="L15"></a><tt class="py-lineno">15</tt>  <tt class="py-line">    <tt class="py-op">(</tt><tt class="py-string">'LIMIT'</tt><tt class="py-op">,</tt> <tt class="py-string">'Limit Order'</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> </tt>
+<a name="L16"></a><tt class="py-lineno">16</tt>  <tt class="py-line"><tt class="py-op">)</tt> </tt>
+<a name="L17"></a><tt class="py-lineno">17</tt>  <tt class="py-line"> </tt>
+<a name="L18"></a><tt class="py-lineno">18</tt>  <tt class="py-line"><tt id="link-11" class="py-name" targets="Variable portfolios.forms.LIMIT_CHOICES=portfolios.forms-module.html#LIMIT_CHOICES"><a title="portfolios.forms.LIMIT_CHOICES" class="py-name" href="#" onclick="return doclink('link-11', 'LIMIT_CHOICES', 'link-11');">LIMIT_CHOICES</a></tt> <tt class="py-op">=</tt> <tt class="py-op">(</tt> </tt>
+<a name="L19"></a><tt class="py-lineno">19</tt>  <tt class="py-line">    <tt class="py-op">(</tt><tt class="py-string">'sell'</tt><tt class="py-op">,</tt> <tt class="py-string">"Sell"</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> </tt>
+<a name="L20"></a><tt class="py-lineno">20</tt>  <tt class="py-line">    <tt class="py-op">(</tt><tt class="py-string">'buy'</tt><tt class="py-op">,</tt> <tt class="py-string">"Buy"</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> </tt>
+<a name="L21"></a><tt class="py-lineno">21</tt>  <tt class="py-line"><tt class="py-op">)</tt> </tt>
+<a name="L22"></a><tt class="py-lineno">22</tt>  <tt class="py-line"> </tt>
+<a name="OrderForm"></a><div id="OrderForm-def"><a name="L23"></a><tt class="py-lineno">23</tt> <a class="py-toggle" href="#" id="OrderForm-toggle" onclick="return toggle('OrderForm');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="portfolios.forms.OrderForm-class.html">OrderForm</a><tt class="py-op">(</tt><tt class="py-base-class">forms</tt><tt class="py-op">.</tt><tt class="py-base-class">Form</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="OrderForm-collapsed" style="display:none;" pad="++" indent="++++"></div><div id="OrderForm-expanded"><a name="L24"></a><tt class="py-lineno">24</tt>  <tt class="py-line">    <tt id="link-12" class="py-name" targets="Variable portfolios.forms.OrderForm.order_type=portfolios.forms.OrderForm-class.html#order_type"><a title="portfolios.forms.OrderForm.order_type" class="py-name" href="#" onclick="return doclink('link-12', 'order_type', 'link-12');">order_type</a></tt> <tt class="py-op">=</tt> <tt id="link-13" class="py-name"><a title="agents.forms
+games.forms
+portfolios.forms
+users.forms" class="py-name" href="#" onclick="return doclink('link-13', 'forms', 'link-0');">forms</a></tt><tt class="py-op">.</tt><tt class="py-name">ChoiceField</tt><tt class="py-op">(</tt><tt class="py-name">required</tt><tt class="py-op">=</tt><tt class="py-name">True</tt><tt class="py-op">,</tt> <tt class="py-name">choices</tt><tt class="py-op">=</tt><tt id="link-14" class="py-name"><a title="portfolios.forms.ORDER_CHOICES" class="py-name" href="#" onclick="return doclink('link-14', 'ORDER_CHOICES', 'link-10');">ORDER_CHOICES</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L25"></a><tt class="py-lineno">25</tt>  <tt class="py-line">    <tt id="link-15" class="py-name" targets="Variable portfolios.forms.OrderForm.trade_type=portfolios.forms.OrderForm-class.html#trade_type"><a title="portfolios.forms.OrderForm.trade_type" class="py-name" href="#" onclick="return doclink('link-15', 'trade_type', 'link-15');">trade_type</a></tt> <tt class="py-op">=</tt> <tt id="link-16" class="py-name"><a title="agents.forms
+games.forms
+portfolios.forms
+users.forms" class="py-name" href="#" onclick="return doclink('link-16', 'forms', 'link-0');">forms</a></tt><tt class="py-op">.</tt><tt class="py-name">ChoiceField</tt><tt class="py-op">(</tt><tt class="py-name">required</tt><tt class="py-op">=</tt><tt class="py-name">False</tt><tt class="py-op">,</tt> <tt class="py-name">choices</tt><tt class="py-op">=</tt><tt id="link-17" class="py-name"><a title="portfolios.forms.LIMIT_CHOICES" class="py-name" href="#" onclick="return doclink('link-17', 'LIMIT_CHOICES', 'link-11');">LIMIT_CHOICES</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L26"></a><tt class="py-lineno">26</tt>  <tt class="py-line">    <tt id="link-18" class="py-name" targets="Variable portfolios.forms.OrderForm.trigger_price=portfolios.forms.OrderForm-class.html#trigger_price"><a title="portfolios.forms.OrderForm.trigger_price" class="py-name" href="#" onclick="return doclink('link-18', 'trigger_price', 'link-18');">trigger_price</a></tt> <tt class="py-op">=</tt> <tt id="link-19" class="py-name"><a title="agents.forms
+games.forms
+portfolios.forms
+users.forms" class="py-name" href="#" onclick="return doclink('link-19', 'forms', 'link-0');">forms</a></tt><tt class="py-op">.</tt><tt class="py-name">FloatField</tt><tt class="py-op">(</tt><tt class="py-name">required</tt><tt class="py-op">=</tt><tt class="py-name">True</tt><tt class="py-op">)</tt> </tt>
+<a name="L27"></a><tt class="py-lineno">27</tt>  <tt class="py-line">    <tt id="link-20" class="py-name"><a title="portfolios.forms.OrderForm.quantity
+portfolios.forms.TransactionForm.quantity
+portfolios.models.OwnedStock.quantity" class="py-name" href="#" onclick="return doclink('link-20', 'quantity', 'link-5');">quantity</a></tt> <tt class="py-op">=</tt> <tt id="link-21" class="py-name"><a title="agents.forms
+games.forms
+portfolios.forms
+users.forms" class="py-name" href="#" onclick="return doclink('link-21', 'forms', 'link-0');">forms</a></tt><tt class="py-op">.</tt><tt class="py-name">IntegerField</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L28"></a><tt class="py-lineno">28</tt>  <tt class="py-line">    <tt id="link-22" class="py-name"><a title="portfolios.forms.OrderForm.stock
+portfolios.forms.TransactionForm.stock" class="py-name" href="#" onclick="return doclink('link-22', 'stock', 'link-7');">stock</a></tt> <tt class="py-op">=</tt> <tt id="link-23" class="py-name"><a title="agents.forms
+games.forms
+portfolios.forms
+users.forms" class="py-name" href="#" onclick="return doclink('link-23', 'forms', 'link-0');">forms</a></tt><tt class="py-op">.</tt><tt class="py-name">CharField</tt><tt class="py-op">(</tt><tt class="py-name">widget</tt> <tt class="py-op">=</tt> <tt id="link-24" class="py-name"><a title="agents.forms
+games.forms
+portfolios.forms
+users.forms" class="py-name" href="#" onclick="return doclink('link-24', 'forms', 'link-0');">forms</a></tt><tt class="py-op">.</tt><tt class="py-name">HiddenInput</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L29"></a><tt class="py-lineno">29</tt>  <tt class="py-line"> </tt><script type="text/javascript">
+<!--
+expandto(location.href);
+// -->
+</script>
+</pre>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            ><a class="navbar" target="_top" href="http://www.assembla.com/spaces/cis422f12_team2/wiki/">Trades by Thursday</a></th>
+          </tr></table></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Fri Nov 30 00:30:45 2012
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

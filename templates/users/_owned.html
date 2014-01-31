@@ -1,0 +1,34 @@
+{% extends "users/_watched.html" %}
+
+{% load user_filters %}
+
+{% block headers %}
+<th>Number Owned</th>
+<th>Current Value</th>
+<th>Gains</th>
+{% endblock headers %}
+
+{% block cells %}
+<td>{{ owned.quantity }}</td>
+<td>{% current_value owned.quantity stock.current_price %}</td>
+<td>{{ owned|get_stock_gains }}</td>
+<td>
+    <a href="#" class="btn form_popover">Trade</a>
+    <div id="formPopClassTitle" class="hide">Trade {{ stock.company_name }} </div>
+    <div id="formPopClassForm" class="hide">
+        {% trade_form stock %}
+    </div>
+</td>
+<td>
+    <a href="#myModal" role="button" class="btn" data-toggle="modal">History</a>
+    <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h3 id="myModalLabel">Transaction History</h3>
+        </div>
+        <div class="modal-body">
+            {% owned_history_table owned %}
+        </div>
+    </div>
+</td>
+{% endblock cells %}
